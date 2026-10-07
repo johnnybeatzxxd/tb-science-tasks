@@ -10,7 +10,7 @@ Formalize the Dol'nikov–Simonyi–Tardos zig-zag theorem (Ky Fan's lemma for K
 | **Profile** | https://uk.linkedin.com/in/salim-abdul-8119a013b |
 | **Domain** | mathematical-sciences / formal-mathematics / topological-combinatorics |
 | **Tags** | `lean4` `mathlib` `kneser-graph` `zig-zag-theorem` `ky-fan-lemma` `borsuk-ulam` `topological-combinatorics` `formal-verification` |
-| **Expert time estimate** | 60 hours |
+| **Expert time estimate** | 50 hours |
 | **Agent budget** | 5 hours |
 | **Resources** | 4 CPUs · 8 GB RAM |
 
@@ -35,9 +35,13 @@ Tucker's lemma, which is enough for the plain chromatic-number bound, is not eno
 
 There is no data: the object being produced is a formal proof, checked by the Lean kernel. This is the work of researchers who formalize combinatorics in Lean/Mathlib, extending the library with results it does not yet have.
 
+### Why a 5-hour agent budget is sufficient
+
+The expert estimate of 50 hours is for a human formalizer who must first work out the Ky Fan parity argument, the labelling and the extraction, and who types Lean at human speed. The 5-hour (18,000 s) agent budget is exactly one tenth of that. It is enough because the mathematics is classical and agents know the Freund–Todd path-following proof of Tucker's lemma and Matoušek's labelling, and generate Lean at a rate of thousands of lines per hour; the reference proof is about 1,400 lines. What an agent still needs is the modification to alternating chains and the right labelling, and a rebuild of the project takes about two minutes, so many compile-and-repair iterations fit in the budget.
+
 ## Reference solution
 
-The oracle (`solution/Zigzag/*.lean`, about 1,400 lines, no `sorry`, axioms exactly `propext`, `Classical.choice`, `Quot.sound`) proves the theorem as follows.
+The oracle (`solution/solve.sh`, which writes the proof files given in `solution/Zigzag/*.lean`, about 1,400 lines, no `sorry`, axioms exactly `propext`, `Classical.choice`, `Quot.sound`) proves the theorem as follows.
 
 - **Ky Fan's lemma** (`FanLabels.lean`, `FanTucker.lean`, `FanStep.lean`): sign vectors are encoded as finite sets of pairs `(i, ±)` with no opposite pair, so that `⪯` is `⊆`. Maximal chains of the face poset of the cross-polytope boundary are encoded as injective sequences of signed coordinates; the label of a chain at level `j` is the label of its prefix. For every antipodal labelling `λ` with no complementary pair, the number of level-`d` chains whose label sequence is positively alternating (with pairwise distinct absolute values) is odd for every `d ≤ n`, by induction on `d` through a swap-and-extend involution/handshake argument.
 - **Labelling** (`Lab.lean`): with `s = n - t`, a signed set `x` whose positive and negative parts contain no member of `F` gets `±|x|` (sign of its first coordinate); otherwise it gets `±(s + 1 + c*(x))`, where `c*(x)` is the largest colour of a member of `F` inside either part and the sign is that of the part where the maximum is attained. Properness of `c` gives antipodality, and the defect hypothesis `ht` bounds the size of small sets by `s`, which rules out complementary pairs.

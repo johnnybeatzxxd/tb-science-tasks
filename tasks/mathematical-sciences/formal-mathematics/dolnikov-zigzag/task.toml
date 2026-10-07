@@ -18,7 +18,7 @@ domain = "mathematical-sciences"
 field = "formal-mathematics"
 subfield = "topological-combinatorics"
 tags = ["lean4", "mathlib", "kneser-graph", "zig-zag-theorem", "ky-fan-lemma", "borsuk-ulam", "topological-combinatorics", "formal-verification"]
-expert_time_estimate_hours = 60.0
+expert_time_estimate_hours = 50.0
 relevant_experience = "Contractor authoring Terminal-Bench-Science mathematics tasks; background in formal mathematics and combinatorics to be completed by the contributor."
 conflicts_of_interest = "Engaged by Turing as a contracted task author; no other conflicts."
 
