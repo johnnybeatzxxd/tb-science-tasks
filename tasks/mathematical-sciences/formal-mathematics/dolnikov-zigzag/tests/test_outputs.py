@@ -5,12 +5,13 @@ other file of the Lean project (lakefile, manifest, toolchain, root module, Defs
 the Mathlib build baked into this image. Checks, in order:
 
 1. contract: Goal.lean exists and every submitted file is a regular `.lean` file;
-2. source scan: banned constructs (proof escapes, kernel bypasses, instances, syntax
-   extensions, metaprogramming) are absent from every submitted file;
+2. source scan: no submitted file contains a construct that runs submitted code at build or
+   load time (#eval, run_cmd, macros, elaborators, simprocs, initializers, native_decide,
+   implemented_by/extern, metaprogramming monads, IO);
 3. build: canonical files are restored, the agent's build directory is wiped, and the
    package is re-elaborated from source with no `sorry` warning;
-4. statement pin: a verifier-owned file restates the exact theorem type and checks the
-   submitted constant against it, and derives a held-out Petersen-graph (KG(5,2)) zig-zag instance;
+4. statement pin: the submitted constant is checked against ZigzagSpec.Statement, the statement
+   elaborated in a verifier-owned module that does not import the submission, and derives a held-out Petersen-graph (KG(5,2)) zig-zag instance;
 5. axiom audit: the kernel environment is traversed from the theorem and the held-out
    instance; the axioms reached must be a subset of {propext, Classical.choice, Quot.sound};
 6. kernel re-check: every submitted declaration reachable from those roots is re-added to
@@ -33,8 +34,9 @@ CANONICAL = [
     ("lean-toolchain", "lean-toolchain"),
     ("Zigzag.lean", "Zigzag.lean"),
     ("Zigzag/Defs.lean", "Zigzag/Defs.lean"),
+    ("ZigzagSpec.lean", "ZigzagSpec.lean"),
 ]
-ROOTS = ["Zigzag.dolnikov_zigzag", "ZigzagCheck.petersen_zigzag"]
+ROOTS = ["Zigzag.dolnikov_zigzag", "ZigzagCheck.pin", "ZigzagCheck.petersen_zigzag"]
 
 
 def run(cmd, timeout=1500):
@@ -71,21 +73,16 @@ def strip_comments(txt):
 
 
 BANNED = [
-    (r"\bsorry\b", "sorry"),
-    (r"\badmit\b", "admit"),
-    (r"\bnative_decide\b", "native_decide"),
-    (r"\bdecide\s*\+\s*native\b|\bdecide\s+\(\s*config\s*:=[^)]*native", "native decide config"),
-    (r"(?m)^\s*(?:@\[[^\]]*\]\s*)?(?:(?:private|protected|noncomputable|unsafe|partial|scoped|local)\s+)*axiom\b", "axiom declaration"),
-    (r"(?m)^\s*(?:@\[[^\]]*\]\s*)?(?:(?:private|protected|noncomputable|unsafe|partial|scoped|local)\s+)*opaque\b", "opaque declaration"),
-    (r"\bset_option\s+debug\.", "set_option debug.*"),
-    (r"\bskipKernelTC\b", "skipKernelTC"),
-    (r"(?m)^\s*(?:@\[[^\]]*\]\s*)?(?:(?:private|protected|noncomputable|scoped|local)\s+)*instance\b", "instance declaration"),
-    (r"@\[[^\]]*\b(?:instance|default_instance|implemented_by|extern|csimp|macro|term_elab|command_elab|tactic|delab|app_unexpander|command_parser)\b", "attribute"),
-    (r"(?m)^\s*attribute\s*\[[^\]]*\b(?:instance|default_instance|implemented_by|extern|csimp|macro|term_elab|command_elab|tactic|delab|app_unexpander)\b", "attribute command"),
-    (r"(?m)^\s*(?:@\[[^\]]*\]\s*|(?:scoped|local)\s+|open\b[^\n]*?\bin\s+)*(?:macro_rules|macro|elab_rules|elab|syntax|declare_syntax_cat|notation|infixl|infixr|infix|prefix|postfix|initialize|builtin_initialize)\b", "syntax extension or initializer"),
-    (r"\b(?:run_cmd|run_elab|run_meta|run_tac)\b", "run_cmd/run_elab/run_tac"),
-    (r"(?m)^\s*#(?:eval|reduce|exit)\b", "#eval/#reduce/#exit"),
-    (r"\b(?:addDecl|addDeclCore|setEnv|modifyEnv|Environment\.add|ofReduceBool|trustCompiler)\b", "environment manipulation"),
+    # Constructs that execute submitted code while the verifier compiles or loads the
+    # submission (such code could read or rewrite verifier files or forge reports).
+    # Soundness is not enforced here: `sorry`, axioms and kernel bypasses are caught by
+    # the build, the axiom audit and the kernel re-check.
+    (r"(?m)^\s*#(?:eval|exit)\b", "#eval/#exit"),
+    (r"\b(?:run_cmd|run_elab|run_meta|run_tac)\b", "run_cmd/run_elab/run_meta/run_tac"),
+    (r"(?m)^\s*(?:@\[[^\]]*\]\s*|(?:private|protected|scoped|local)\s+|open\b[^\n]*?\bin\s+)*(?:macro_rules|macro|elab_rules|elab|initialize|builtin_initialize|simproc|dsimproc)\b", "macro/elab/initialize/simproc command"),
+    (r"\bnative_decide\b|\bdecide\s*\+\s*native\b|\bdecide\s+\(\s*config\s*:=[^)]*native", "native_decide (runs compiled code)"),
+    (r"(?:@\[|\battribute\s*\[)[^\]]*\b(?:implemented_by|extern|init|builtin_init)\b", "implemented_by/extern/init attribute"),
+    (r"\b(?:IO|BaseIO|EIO|unsafeBaseIO|unsafeIO|unsafeEIO|unsafePerformIO|MetaM|TacticM|CoreM|TermElabM|CommandElabM|SimpM|addDecl|addDeclCore|setEnv|modifyEnv|ofReduceBool|trustCompiler|FilePath)\b|(?m)^(?!\s*import\b).*?\b(?:Lean|Mathlib)\.(?:Meta|Elab|Tactic|Compiler|Environment)\b", "metaprogramming or system access"),
 ]
 
 
@@ -101,7 +98,7 @@ def test_artifact_contract():
 
 
 def test_no_banned_constructs():
-    """No submitted file uses a proof escape, kernel bypass, instance, or syntax/metaprogramming extension."""
+    """No submitted file contains a command or attribute that executes code while the verifier builds or loads it."""
     for f in submitted_lean():
         txt = strip_comments(f.read_text(errors="replace"))
         for pat, name in BANNED:
@@ -116,7 +113,7 @@ def test_build_from_source():
         shutil.copy(SEED / src, APP / dst)
     (APP / "lakefile.lean").unlink(missing_ok=True)
     shutil.rmtree(APP / ".lake" / "build", ignore_errors=True)
-    r = run(["lake", "build", "Zigzag"])
+    r = run(["lake", "build", "Zigzag", "ZigzagSpec"])
     out = r.stdout + r.stderr
     assert r.returncode == 0, f"lake build failed:\n{out[-6000:]}"
     assert "declaration uses" not in out, "the build reports a declaration using sorry"

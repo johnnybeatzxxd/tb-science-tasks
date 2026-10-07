@@ -32,9 +32,9 @@ COPY . /tests/
 RUN chmod +x /tests/test.sh
 
 # Canonical project (tests/seed/* is byte-identical to environment/data/*, minus Goal.lean)
-# with Mathlib's cache and Defs.lean prebuilt; the submission is compiled at trial time.
+# with Mathlib's cache, Defs.lean and the verifier's restatement ZigzagSpec.lean prebuilt; the submission is compiled at trial time.
 RUN mkdir -p /app/Zigzag /logs/verifier \
  && cp /tests/seed/lakefile.toml /tests/seed/lake-manifest.json /tests/seed/lean-toolchain \
-       /tests/seed/Zigzag.lean /app/ \
+       /tests/seed/Zigzag.lean /tests/seed/ZigzagSpec.lean /app/ \
  && cp /tests/seed/Zigzag/Defs.lean /app/Zigzag/Defs.lean \
- && cd /app && lake exe cache get && lake build Zigzag.Defs
+ && cd /app && lake exe cache get && lake build Zigzag.Defs ZigzagSpec

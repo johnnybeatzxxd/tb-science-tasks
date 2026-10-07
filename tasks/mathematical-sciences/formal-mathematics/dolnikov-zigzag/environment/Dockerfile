@@ -29,4 +29,4 @@ COPY data/ /app/
 
 # Fetch Mathlib's prebuilt .olean cache at the pinned revision and build the project
 # (Goal.lean's `sorry` compiles as a warning), so the agent starts from a warm build.
-RUN lake exe cache get && lake build Zigzag
+RUN lake exe cache get && lake build Zigzag ZigzagSpec

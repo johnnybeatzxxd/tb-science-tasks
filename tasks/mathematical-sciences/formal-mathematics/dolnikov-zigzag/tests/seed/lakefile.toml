@@ -8,3 +8,7 @@ rev = "v4.34.1"
 
 [[lean_lib]]
 name = "Zigzag"
+
+# Verifier-owned restatement of the goal, elaborated without importing the submission.
+[[lean_lib]]
+name = "ZigzagSpec"
