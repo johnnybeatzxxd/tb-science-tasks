@@ -8,7 +8,7 @@ Formalize the Dol'nikov–Simonyi–Tardos zig-zag theorem (Ky Fan's lemma for K
 | | |
 |---|---|
 | **Author** | Salim Abdlselam (Independent Researcher) — salim.a@turing.com |
-| **Profile** | TODO: contributor to supply a profile URL |
+| **Profile** | https://uk.linkedin.com/in/salim-abdul-8119a013b |
 | **Domain** | mathematical-sciences / formal-mathematics / topological-combinatorics |
 | **Tags** | `lean4` `mathlib` `kneser-graph` `zig-zag-theorem` `ky-fan-lemma` `borsuk-ulam` `topological-combinatorics` `formal-verification` |
 | **Expert time estimate** | 60 hours |
