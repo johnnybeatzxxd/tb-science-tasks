@@ -121,7 +121,7 @@ def test_build_from_source():
     r = run(["lake", "build", "Kneser"])
     out = r.stdout + r.stderr
     assert r.returncode == 0, f"lake build failed:\n{out[-6000:]}"
-    assert "declaration uses 'sorry'" not in out, "the build reports a declaration using sorry"
+    assert "declaration uses" not in out, "the build reports a declaration using sorry"
     for src, dst in CANONICAL:
         assert filecmp.cmp(SEED / src, APP / dst, shallow=False), f"{dst} differs from the canonical copy"
 
@@ -149,7 +149,7 @@ partial def axCollect (env : Environment) : List Name → NameSet → NameSet �
       | some ci =>
         let axs := if ci matches .axiomInfo _ then axs.insert n else axs
         let deps := (ci.type.getUsedConstants ++
-          (match ci.value? with | some v => v.getUsedConstants | none => #[])).toList
+          (match ci.value? (allowOpaque := true) with | some v => v.getUsedConstants | none => #[])).toList
         axCollect env (deps ++ rest) vis axs
 
 open Lean in
@@ -158,7 +158,10 @@ open Lean in
   let roots : List Name := [{roots}]
   for r in roots do
     if (env.find? r).isNone then throwError "missing root constant {{r}}"
-  let axs := axCollect env roots {{}} {{}}
+  let mut axs := axCollect env roots {{}} {{}}
+  for r in roots do
+    for a in (← Lean.collectAxioms r) do
+      axs := axs.insert a
   IO.println "<<axioms-begin>>"
   for a in axs.toList do IO.println a.toString
   IO.println "<<axioms-end>>"
@@ -187,7 +190,7 @@ partial def rkCollect (env : Environment) : List Name → NameSet → NameSet
       | none => rkCollect env rest s
       | some ci =>
         let deps := (ci.type.getUsedConstants ++
-          (match ci.value? with | some v => v.getUsedConstants | none => #[])).toList
+          (match ci.value? (allowOpaque := true) with | some v => v.getUsedConstants | none => #[])).toList
         rkCollect env (deps ++ rest) s
 
 open Lean in
@@ -201,16 +204,17 @@ open Lean in
   let env ← getEnv
   let roots : List Name := [{roots}]
   let hb := (Core.getMaxHeartbeats (← getOptions)).toUSize
+  let rd := (maxRecDepth.get (← getOptions)).toUSize
   let mut count := 0
   for c in (rkCollect env roots {{}}).toList do
     if rkSubmitted env c then
       match env.find? c with
       | some (.thmInfo v) =>
-        match env.addDeclCore hb (.thmDecl {{ v with name := c.appendAfter "__rk" }}) none true with
+        match env.addDeclCore hb rd (.thmDecl {{ v with name := c.appendAfter "__rk" }}) none true with
         | .ok _ => count := count + 1
         | .error _ => throwError "kernel re-check failed for {{c}}"
       | some (.defnInfo v) =>
-        match env.addDeclCore hb (.defnDecl {{ v with name := c.appendAfter "__rk" }}) none true with
+        match env.addDeclCore hb rd (.defnDecl {{ v with name := c.appendAfter "__rk" }}) none true with
         | .ok _ => count := count + 1
         | .error _ => throwError "kernel re-check failed for {{c}}"
       | some (.inductInfo _) | some (.ctorInfo _) | some (.recInfo _) => pure ()
@@ -221,4 +225,6 @@ open Lean in
     (APP / "KernelCheck.lean").write_text(script)
     r = run(["lake", "env", "lean", "KernelCheck.lean"])
     assert r.returncode == 0, f"kernel re-check failed:\n{(r.stdout + r.stderr)[-6000:]}"
-    assert "<<recheck-ok" in r.stdout, "kernel re-check did not report"
+    m = re.search(r"<<recheck-ok (\d+)>>", r.stdout)
+    assert m, "kernel re-check did not report"
+    assert int(m.group(1)) >= 1, "kernel re-check found no submitted declaration to check"
