@@ -82,7 +82,8 @@ BANNED = [
     (r"(?m)^\s*(?:@\[[^\]]*\]\s*|(?:private|protected|scoped|local)\s+|open\b[^\n]*?\bin\s+)*(?:macro_rules|macro|elab_rules|elab|initialize|builtin_initialize|simproc|dsimproc)\b", "macro/elab/initialize/simproc command"),
     (r"\bnative_decide\b|\bdecide\s*\+\s*native\b|\bdecide\s+\(\s*config\s*:=[^)]*native", "native_decide (runs compiled code)"),
     (r"(?:@\[|\battribute\s*\[)[^\]]*\b(?:implemented_by|extern|init|builtin_init)\b", "implemented_by/extern/init attribute"),
-    (r"\b(?:IO|BaseIO|EIO|unsafeBaseIO|unsafeIO|unsafeEIO|unsafePerformIO|MetaM|TacticM|CoreM|TermElabM|CommandElabM|SimpM|addDecl|addDeclCore|setEnv|modifyEnv|ofReduceBool|trustCompiler|FilePath)\b|(?m)^(?!\s*import\b).*?\b(?:Lean|Mathlib)\.(?:Meta|Elab|Tactic|Compiler|Environment)\b", "metaprogramming or system access"),
+    (r"\b(?:IO|BaseIO|EIO|unsafeBaseIO|unsafeIO|unsafeEIO|unsafePerformIO|MetaM|TacticM|CoreM|TermElabM|CommandElabM|SimpM|addDecl|addDeclCore|setEnv|modifyEnv|ofReduceBool|trustCompiler|FilePath)\b", "metaprogramming or system access"),
+    (r"(?m)^(?!\s*import\b).*?\b(?:Lean|Mathlib)\.(?:Meta|Elab|Tactic|Compiler|Environment)\b", "metaprogramming namespace"),
 ]
 
 
