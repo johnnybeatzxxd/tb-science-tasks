@@ -1,4 +1,4 @@
-oracle reward=1 time=126s failed=[]
+oracle (5 runs) reward=1 x5; times 126s,164s,118s,121s,119s
 nop reward=0 time=80s failed=[test_outputs.py::test_no_banned_constructs,test_outputs.py::test_build_from_source,test_outputs.py::test_axioms]
 01-nop-sorry reward=0 time=79s failed=[test_outputs.py::test_no_banned_constructs,test_outputs.py::test_build_from_source,test_outputs.py::test_axioms]
 02-axiom reward=0 time=79s failed=[test_outputs.py::test_no_banned_constructs,test_outputs.py::test_axioms,test_outputs.py::test_kernel_recheck]
