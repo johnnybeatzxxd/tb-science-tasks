@@ -33,9 +33,9 @@ network_mode = "no-network"
 timeout_sec = 18000
 
 [environment]
-build_timeout_sec = 1800.0  # elan + toolchain + Mathlib cache download
+build_timeout_sec = 1800.0  # elan + toolchain + partial Mathlib cache download
 cpus = 4
 memory_mb = 8192  # parallel `lean` workers over Mathlib need ~2 GB each
-storage_mb = 10240  # sandbox maximum; the image is trimmed to fit (Mathlib cache ~6.4 GB, toolchain ~2.4 GB)
+storage_mb = 10240  # sandbox maximum; only the Mathlib modules imported by Defs.lean are cached (~1.3 GB)
 gpus = 0
 network_mode = "public"

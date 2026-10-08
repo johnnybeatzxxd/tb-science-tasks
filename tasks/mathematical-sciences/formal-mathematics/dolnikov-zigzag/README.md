@@ -53,9 +53,13 @@ This is a formal-proof task. The deliverable is Lean source, and its correctness
 
 `solve.py` uses the task inputs and fails rather than guess. It checks `Defs.lean`, parses the goal and its binder names from the starter `Goal.lean`, and refuses to continue if the statement differs from the one the library proves. It then writes the proof of the goal, rebuilds the project from source and audits the axioms of the result. The verifier never imports the oracle. It independently pins the statement against `ZigzagSpec.Statement`, derives a held-out instance, audits axioms and re-runs the kernel check.
 
+## Environment
+
+The image holds Lean 4.34.1 and the Mathlib v4.34.1 sources. To fit a 10 GB sandbox, only the Mathlib modules imported by `Zigzag/Defs.lean` are prebuilt from Mathlib's cache, together with all of their dependencies. That is about 1,900 modules (finite sets, set families, graph colourings, `ZMod`, permutations, big operators, order, common tactics), about 1.3 GB instead of 6.4 GB. The reference solution needs nothing beyond them. The instruction tells the agent which modules are prebuilt and that any other import is compiled from source.
+
 ## Verification
 
-`tests/test_outputs.py` runs six deterministic pytest checks in a separate no-network verifier image that has Lean 4.34.1 and the Mathlib v4.34.1 build baked in. The reward is 1 iff all of them pass. The submission is the directory `/app/Zigzag/`.
+`tests/test_outputs.py` runs six deterministic pytest checks in a separate no-network verifier image that has Lean 4.34.1 and the same prebuilt part of Mathlib v4.34.1 baked in. The reward is 1 iff all of them pass. The submission is the directory `/app/Zigzag/`.
 
 1. **Artifact contract:** `Goal.lean` exists and every submitted file is a regular `.lean` file.
 2. **Source scan (grader integrity only):** with comments stripped, no submitted file contains a construct that would run submitted code while the verifier compiles or loads it, such as `#eval`, `run_cmd`, macros, elaborators, simprocs, initializers, `native_decide`, `implemented_by`/`extern`, metaprogramming monads or `IO`. Such code runs as root in the grading container and could rewrite verifier files or forge reports. The scan does not restrict mathematical representation: `instance`, `notation`, `opaque` and even `axiom` declarations are allowed, because soundness is enforced by checks 3, 5 and 6.

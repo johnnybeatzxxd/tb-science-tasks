@@ -1,4 +1,4 @@
-import Mathlib
+import Zigzag.Defs
 
 namespace Zigzag
 
