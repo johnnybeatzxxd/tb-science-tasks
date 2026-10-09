@@ -48,4 +48,16 @@ namespace Zigzag
 def Mono {n : ℕ} (col : Fin n → Bool) (A : Finset (Fin n)) : Prop :=
   ∀ i ∈ A, ∀ j ∈ A, col i = col j
 
+/-- The set system of `/app/data/family.json`, as a finset of subsets of `Fin 6`. -/
+def family : Finset (Finset (Fin 6)) :=
+  {{0, 2}, {0, 1}, {1, 2, 4}, {2, 5}, {3, 4, 5}, {0, 3, 5}, {0, 4, 5}, {3, 4}, {0, 2, 4}, {3, 5}, {1, 3}, {1, 2}, {1, 4}, {0, 3}, {0, 2, 3}, {4, 5}, {0, 1, 4}, {0, 1, 5}, {2, 4}, {1, 5}, {0, 4}, {0, 1, 2}, {2, 3}, {0, 5}}
+
+/-- The Kneser graph of a set system: two members are adjacent iff they are disjoint. -/
+def kneserGraphOf {n : ℕ} (F : Finset (Finset (Fin n))) : SimpleGraph {A // A ∈ F} :=
+  SimpleGraph.fromRel fun A B => Disjoint A.1 B.1
+
+/-- `k` is the chromatic number of the Kneser graph of `family`. -/
+def FamilyChromaticNumber (k : ℕ) : Prop :=
+  (kneserGraphOf family).chromaticNumber = (k : ℕ∞)
+
 end Zigzag

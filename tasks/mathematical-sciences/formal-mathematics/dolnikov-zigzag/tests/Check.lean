@@ -31,4 +31,10 @@ theorem petersen_zigzag (c : Finset (Fin 5) → ℕ)
   exact ⟨f 0, hf 0, f 1, hf 1, f 2, hf 2, hlt 0 1 (by decide), hlt 1 2 (by decide),
     hd 0 1 (by decide), hd 1 2 (by decide)⟩
 
+/-- The data part: the submitted value must be the true chromatic number of the Kneser graph of
+`Zigzag.family` (`/app/data/family.json`). The numeral is written without `OfNat` so that
+instances declared in the submission cannot change it. -/
+theorem family_pin : Zigzag.FamilyChromaticNumber (Nat.succ (Nat.succ (Nat.succ (Nat.succ Nat.zero)))) :=
+  Zigzag.family_chromatic_number
+
 end ZigzagCheck

@@ -12,9 +12,11 @@ the Mathlib build baked into this image. Checks, in order:
 3. build: canonical files are restored, the agent's build directory is wiped, and the
    package is re-elaborated from source with no `sorry` warning;
 4. statement pin: the submitted constant is checked against ZigzagSpec.Statement, the statement
-   elaborated in a verifier-owned module that does not import the submission, and derives a held-out Petersen-graph (KG(5,2)) zig-zag instance;
-5. axiom audit: the kernel environment is traversed from the theorem and the held-out
-   instance; the axioms reached must be a subset of {propext, Classical.choice, Quot.sound};
+   elaborated in a verifier-owned module that does not import the submission, derives a
+   held-out Petersen-graph (KG(5,2)) zig-zag instance, and checks that the data-part theorem
+   `Zigzag.family_chromatic_number` states the true chromatic number for data/family.json;
+5. axiom audit: the kernel environment is traversed from both theorems and the verifier's
+   pins; the axioms reached must be a subset of {propext, Classical.choice, Quot.sound};
 6. kernel re-check: every submitted theorem and definition reachable from those roots is
    re-added to the environment with kernel type checking enabled.
 """
@@ -38,7 +40,8 @@ CANONICAL = [
     ("Zigzag/Defs.lean", "Zigzag/Defs.lean"),
     ("ZigzagSpec.lean", "ZigzagSpec.lean"),
 ]
-ROOTS = ["Zigzag.dolnikov_zigzag", "ZigzagCheck.pin", "ZigzagCheck.petersen_zigzag"]
+ROOTS = ["Zigzag.dolnikov_zigzag", "ZigzagCheck.pin", "ZigzagCheck.petersen_zigzag",
+         "Zigzag.family_chromatic_number", "ZigzagCheck.family_pin"]
 
 
 TOTAL_BUDGET_SEC = 1200  # the instruction: the whole verification must finish within this
@@ -139,7 +142,7 @@ def test_build_from_source():
 
 
 def test_statement_pin_and_instance():
-    """The theorem has exactly the stated type, and it yields a held-out Petersen-graph (KG(5,2)) zig-zag instance."""
+    """The theorem has exactly the stated type and yields a held-out Petersen-graph (KG(5,2)) zig-zag instance, and the data-part theorem states the true chromatic number of the Kneser graph of `family`."""
     shutil.copy(TESTS / "Check.lean", APP / "Check.lean")
     r = run(["lake", "env", "lean", "Check.lean"])
     assert r.returncode == 0, f"statement pin / held-out instance failed:\n{(r.stdout + r.stderr)[-6000:]}"
