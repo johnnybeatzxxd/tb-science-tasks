@@ -14,13 +14,15 @@ the Mathlib build baked into this image. Checks, in order:
 4. statement pin: the submitted constant is checked against ZigzagSpec.Statement, the statement
    elaborated in a verifier-owned module that does not import the submission, derives a
    held-out Petersen-graph (KG(5,2)) zig-zag instance, and checks that the data-part theorem
-   `Zigzag.family_chromatic_number` states the true chromatic number for data/family.json;
+   `Zigzag.family_chromatic_number` states the true chromatic number of the Kneser graph of
+   data/family.json, which the verifier computes itself by exact backtracking search;
 5. axiom audit: the kernel environment is traversed from both theorems and the verifier's
    pins; the axioms reached must be a subset of {propext, Classical.choice, Quot.sound};
 6. kernel re-check: every submitted theorem and definition reachable from those roots is
    re-added to the environment with kernel type checking enabled.
 """
 import filecmp
+import json
 import re
 import shutil
 import subprocess
@@ -46,6 +48,63 @@ ROOTS = ["Zigzag.dolnikov_zigzag", "ZigzagCheck.pin", "ZigzagCheck.petersen_zigz
 
 TOTAL_BUDGET_SEC = 1200  # the instruction: the whole verification must finish within this
 _started = []
+
+
+def family_sets():
+    """The set system of data/family.json (verifier copy), checked against `family` in Defs.lean."""
+    d = json.loads((SEED / "data" / "family.json").read_text())
+    n, sets = d["n"], sorted(sorted(S) for S in d["sets"])
+    defs = (SEED / "Zigzag" / "Defs.lean").read_text()
+    m = re.search(r"def\s+family\s*:\s*Finset \(Finset \(Fin (\d+)\)\)\s*:=\s*\{(.*?)\}\s*\n", defs, re.S)
+    assert m and int(m.group(1)) == n, "verifier data: Defs.lean has no family over the same ground set"
+    lean_sets = sorted(sorted(int(x) for x in g.split(",")) for g in re.findall(r"\{([0-9, ]+)\}", m.group(2)))
+    assert lean_sets == sets, "verifier data: family.json and Defs.lean disagree"
+    return n, sets
+
+
+def true_chromatic_number():
+    """Reference value: the chromatic number of the Kneser graph of the family, by exact search.
+
+    Vertices are the members of the family, adjacent iff disjoint. For k = 1, 2, ... a complete
+    backtracking search decides whether a proper k-colouring exists; the first k that admits one
+    is the chromatic number (every smaller k was refuted exhaustively)."""
+    _, sets = family_sets()
+    masks = [sum(1 << i for i in S) for S in sets]
+    m = len(masks)
+    adj = [[j for j in range(m) if j != i and masks[i] & masks[j] == 0] for i in range(m)]
+    order = sorted(range(m), key=lambda i: -len(adj[i]))
+
+    def colourable(k):
+        col = [-1] * m
+
+        def bt(i):
+            if i == m:
+                return True
+            v = order[i]
+            used = {col[u] for u in adj[v] if col[u] >= 0}
+            for c in range(k):
+                if c not in used:
+                    col[v] = c
+                    if bt(i + 1):
+                        return True
+                    col[v] = -1
+            return False
+
+        return bt(0)
+
+    k = 1
+    while not colourable(k):
+        k += 1
+    return k
+
+
+def check_source():
+    """Check.lean with the family pin instantiated at the verifier's own reference value."""
+    k = true_chromatic_number()
+    numeral = "Nat.zero"
+    for _ in range(k):
+        numeral = f"Nat.succ ({numeral})"
+    return (TESTS / "Check.lean").read_text().replace("__FAMILY_K__", numeral)
 
 
 def run(cmd):
@@ -142,8 +201,8 @@ def test_build_from_source():
 
 
 def test_statement_pin_and_instance():
-    """The theorem has exactly the stated type and yields a held-out Petersen-graph (KG(5,2)) zig-zag instance, and the data-part theorem states the true chromatic number of the Kneser graph of `family`."""
-    shutil.copy(TESTS / "Check.lean", APP / "Check.lean")
+    """The theorem has exactly the stated type and yields a held-out Petersen-graph (KG(5,2)) zig-zag instance, and the data-part theorem states the true chromatic number of the Kneser graph of `family`, which the verifier computes itself from data/family.json by exact search."""
+    (APP / "Check.lean").write_text(check_source())
     r = run(["lake", "env", "lean", "Check.lean"])
     assert r.returncode == 0, f"statement pin / held-out instance failed:\n{(r.stdout + r.stderr)[-6000:]}"
 
@@ -151,7 +210,7 @@ def test_statement_pin_and_instance():
 def test_axioms():
     """The theorem and the held-out instance depend only on propext, Classical.choice and Quot.sound."""
     roots = ", ".join(f"`{x}" for x in ROOTS)
-    script = (TESTS / "Check.lean").read_text() + f"""
+    script = check_source() + f"""
 open Lean in
 partial def axCollect (env : Environment) : List Name → NameSet → NameSet → NameSet
   | [], _, axs => axs
@@ -193,7 +252,7 @@ open Lean in
 def test_kernel_recheck():
     """Every submitted theorem and definition reachable from the theorem is re-added to the environment and re-checked by the Lean kernel (inductive types are kernel-checked when the build adds them, and kernel-bypass options are banned)."""
     roots = ", ".join(f"`{x}" for x in ROOTS)
-    script = (TESTS / "Check.lean").read_text() + f"""
+    script = check_source() + f"""
 open Lean in
 partial def rkCollect (env : Environment) : List Name → NameSet → NameSet
   | [], s => s

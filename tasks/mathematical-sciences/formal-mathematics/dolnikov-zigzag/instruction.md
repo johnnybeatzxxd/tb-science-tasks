@@ -13,7 +13,7 @@ theorem dolnikov_zigzag {n : ℕ} (F : Finset (Finset (Fin n))) (c : Finset (Fin
 
 with the proof replaced by `sorry`. In words: `c` is a proper colouring (with colours in `ℕ`, any number of them) of the Kneser graph of the set system `F`, and `t` is a lower bound for the 2-colourability defect of `F`; the conclusion is that `F` contains `t` sets whose colours are strictly increasing and such that any two of them with indices of opposite parity are disjoint (a "zig-zag" complete bipartite subgraph of the Kneser graph). Replace the `sorry` with a complete proof.
 
-Then apply it to data. `/app/data/family.json` describes a set system on the ground set {0, …, 5} (key `sets`); the same system is defined in `Defs.lean` as `Zigzag.family`, together with its Kneser graph `Zigzag.kneserGraphOf family` (two members adjacent iff disjoint) and the predicate `Zigzag.FamilyChromaticNumber k`, which says that this graph has chromatic number `k`. Determine the chromatic number of this graph and prove it: add, in namespace `Zigzag` in `Goal.lean` or in a file it imports, a theorem
+Then apply it to data. `/app/data/family.json` describes a set system on the ground set $\{0, \dots, 5\}$ (key `sets`); the same system is defined in `Defs.lean` as `Zigzag.family`, together with its Kneser graph `Zigzag.kneserGraphOf family` (two members adjacent iff disjoint) and the predicate `Zigzag.FamilyChromaticNumber k`, which says that this graph has chromatic number `k`. Determine the chromatic number of this graph and prove it: add, in namespace `Zigzag` in `Goal.lean` or in a file it imports, a theorem
 
 ```lean
 theorem family_chromatic_number : FamilyChromaticNumber k
