@@ -6,7 +6,8 @@ the Mathlib build baked into this image. Checks, in order:
 
 1. contract: Goal.lean exists and every submitted file is a regular `.lean` file;
 2. source scan: no submitted file contains a construct that runs submitted code at build or
-   load time (#eval, run_cmd, macros, elaborators, simprocs, initializers, native_decide,
+   load time or that bypass the kernel (#eval, run_cmd, macros, elaborators, simprocs,
+   initializers, native_decide, set_option debug.*, skipKernelTC,
    implemented_by/extern, metaprogramming monads, IO);
 3. build: canonical files are restored, the agent's build directory is wiped, and the
    package is re-elaborated from source with no `sorry` warning;
@@ -14,13 +15,14 @@ the Mathlib build baked into this image. Checks, in order:
    elaborated in a verifier-owned module that does not import the submission, and derives a held-out Petersen-graph (KG(5,2)) zig-zag instance;
 5. axiom audit: the kernel environment is traversed from the theorem and the held-out
    instance; the axioms reached must be a subset of {propext, Classical.choice, Quot.sound};
-6. kernel re-check: every submitted declaration reachable from those roots is re-added to
-   the environment with kernel type checking enabled.
+6. kernel re-check: every submitted theorem and definition reachable from those roots is
+   re-added to the environment with kernel type checking enabled.
 """
 import filecmp
 import re
 import shutil
 import subprocess
+import time
 from pathlib import Path
 
 APP = Path("/app")
@@ -39,8 +41,20 @@ CANONICAL = [
 ROOTS = ["Zigzag.dolnikov_zigzag", "ZigzagCheck.pin", "ZigzagCheck.petersen_zigzag"]
 
 
-def run(cmd, timeout=1500):
-    return subprocess.run(cmd, cwd=APP, capture_output=True, text=True, timeout=timeout)
+TOTAL_BUDGET_SEC = 1200  # the instruction: the whole verification must finish within this
+_started = []
+
+
+def run(cmd):
+    """Run a Lean command; all commands together must fit in TOTAL_BUDGET_SEC."""
+    if not _started:
+        _started.append(time.monotonic())
+    remaining = TOTAL_BUDGET_SEC - (time.monotonic() - _started[0])
+    assert remaining > 0, f"the verification exceeded {TOTAL_BUDGET_SEC} seconds"
+    try:
+        return subprocess.run(cmd, cwd=APP, capture_output=True, text=True, timeout=remaining)
+    except subprocess.TimeoutExpired:
+        raise AssertionError(f"the verification exceeded {TOTAL_BUDGET_SEC} seconds")
 
 
 def submitted_files():
@@ -80,7 +94,8 @@ BANNED = [
     (r"(?m)^\s*#(?:eval|exit)\b", "#eval/#exit"),
     (r"\b(?:run_cmd|run_elab|run_meta|run_tac)\b", "run_cmd/run_elab/run_meta/run_tac"),
     (r"(?m)^\s*(?:@\[[^\]]*\]\s*|(?:private|protected|scoped|local)\s+|open\b[^\n]*?\bin\s+)*(?:macro_rules|macro|elab_rules|elab|initialize|builtin_initialize|simproc|dsimproc)\b", "macro/elab/initialize/simproc command"),
-    (r"\bnative_decide\b|\bdecide\s*\+\s*native\b|\bdecide\s+\(\s*config\s*:=[^)]*native", "native_decide (runs compiled code)"),
+    (r"\bnative_decide\b|\bdecide\s*\+\s*native\b", "native_decide (runs compiled code)"),
+    (r"\bset_option\s+debug\.|\bskipKernelTC\b", "kernel-bypass option (set_option debug.*, skipKernelTC)"),
     (r"(?:@\[|\battribute\s*\[)[^\]]*\b(?:implemented_by|extern|init|builtin_init)\b", "implemented_by/extern/init attribute"),
     (r"\b(?:IO|BaseIO|EIO|unsafeBaseIO|unsafeIO|unsafeEIO|unsafePerformIO|MetaM|TacticM|CoreM|TermElabM|CommandElabM|SimpM|addDecl|addDeclCore|setEnv|modifyEnv|ofReduceBool|trustCompiler|FilePath)\b", "metaprogramming or system access"),
     (r"(?m)^(?!\s*import\b).*?\b(?:Lean|Mathlib)\.(?:Meta|Elab|Tactic|Compiler|Environment)\b", "metaprogramming namespace"),
@@ -88,13 +103,14 @@ BANNED = [
 
 
 def test_artifact_contract():
-    """The submission directory holds Goal.lean, and only regular, non-symlink .lean files."""
+    """Goal.lean exists and every file in the submission directory is a regular (non-symlink) .lean file."""
     assert SUB.is_dir(), "/app/Zigzag/ is missing"
     goal = SUB / "Goal.lean"
     assert goal.is_file() and not goal.is_symlink(), "/app/Zigzag/Goal.lean is missing"
     for p in SUB.rglob("*"):
         assert not p.is_symlink(), f"symlink in submission: {p}"
         if not p.is_dir():
+            assert p.is_file(), f"not a regular file in submission: {p}"
             assert p.suffix == ".lean", f"non-Lean file in submission: {p}"
 
 
@@ -172,7 +188,7 @@ open Lean in
 
 
 def test_kernel_recheck():
-    """Every submitted declaration reachable from the theorem is re-checked by the Lean kernel."""
+    """Every submitted theorem and definition reachable from the theorem is re-added to the environment and re-checked by the Lean kernel (inductive types are kernel-checked when the build adds them, and kernel-bypass options are banned)."""
     roots = ", ".join(f"`{x}" for x in ROOTS)
     script = (TESTS / "Check.lean").read_text() + f"""
 open Lean in
