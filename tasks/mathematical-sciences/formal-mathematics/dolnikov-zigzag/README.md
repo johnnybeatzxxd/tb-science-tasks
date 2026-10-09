@@ -47,6 +47,19 @@ The oracle is `solution/solve.py` (run by `solve.sh`). It reads the starter proj
 - **Labelling** (`Lab.lean`): with `s = n - t`, a signed set `x` whose positive and negative parts contain no member of `F` gets `±|x|` (sign of its first coordinate); otherwise it gets `±(s + 1 + c*(x))`, where `c*(x)` is the largest colour of a member of `F` inside either part and the sign is that of the part where the maximum is attained. Properness of `c` gives antipodality, and the defect hypothesis `ht` bounds the size of small sets by `s`, which rules out complementary pairs.
 - **Extraction** (`Extract.lean`, `Main.lean`): in an alternating chain with distinct absolute values the `t` indices carrying the largest absolute values have labels `≥ s + 1`, increasing absolute values and alternating signs. They are big, so each carries a member `A_i` of `F` inside its positive or negative part, with `c(A_i) = |label| - s - 1`. Nestedness of chain prefixes and opposite signs give disjointness for indices of opposite parity.
 
+### Where the environment drives the science
+
+The statement is fixed, but the proof is not: the solver has to find the mathematical objects that make it work, and the environment decides which candidates survive.
+
+- **The labelling has to be found empirically.** The reduction needs an antipodal labelling of nonzero sign vectors with no complementary pair `x ⪯ y`, `λ(x) = −λ(y)`, built from the colouring and the defect bound. Natural candidates fail, and the way to find out is to compute. `solution/explore_labellings.py` (an exploration aid, not used by `solve.sh`) tests labellings by brute force on random small set systems with proper colourings, using the `python3` in the image. On 240 instances with `t ≥ 1` (seed 1):
+  - the oracle's labelling never fails;
+  - dropping the offset `s + 1` from the big labels fails on 156 of them;
+  - signing big labels by the first coordinate instead of by the side attaining the maximal colour fails on 214 of them.
+
+  A solver that formalizes a wrong labelling only learns it is wrong after hundreds of lines, so testing candidates on concrete instances first is part of the real workflow.
+- **The parity statement has to be the right one.** Tucker-style "some complementary edge exists" counting does not give the zig-zag. The solver must settle, by checking small cases or by failed proof obligations, which chains to count (positively alternating ones with distinct absolute values) and at which levels the count is odd.
+- **Lean's feedback is mathematical, not only syntactic.** An unprovable goal in the kernel-checked development is a counterexample to the lemma as stated (for example a missing hypothesis on distinct absolute values, or an off-by-one level). The solver has to revise the mathematics in response, not just the code.
+
 ### Why the oracle ships Lean source
 
 This is a formal-proof task. The deliverable is Lean source, and its correctness comes from Lean elaborating it and the kernel checking it. No general procedure derives a ~1,400-line proof of a new theorem from its statement, so any correct oracle for a proof task must supply proof source, just as the oracle of a programming task supplies program source. The proof library in `solution/proof_library/` is the solver code. It is kept in separate files called from `solve.py`, and every line of it is re-checked by the kernel on each run.
