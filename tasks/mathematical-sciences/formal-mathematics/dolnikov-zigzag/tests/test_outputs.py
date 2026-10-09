@@ -15,14 +15,18 @@ the Mathlib build baked into this image. Checks, in order:
    elaborated in a verifier-owned module that does not import the submission, derives a
    held-out Petersen-graph (KG(5,2)) zig-zag instance, and checks that the data-part theorem
    `Zigzag.family_chromatic_number` states the true chromatic number of the Kneser graph of
-   data/family.json, which the verifier computes itself by exact backtracking search;
+   data/family.json, which the verifier computes itself as a minimum cover of the vertices
+   by maximal independent sets (Bron–Kerbosch), independently of the oracle's method;
 5. axiom audit: the kernel environment is traversed from both theorems and the verifier's
    pins; the axioms reached must be a subset of {propext, Classical.choice, Quot.sound};
 6. kernel re-check: every submitted theorem and definition reachable from those roots is
    re-added to the environment with kernel type checking enabled.
 """
 import filecmp
+import functools
+import itertools
 import json
+import operator
 import re
 import shutil
 import subprocess
@@ -63,37 +67,33 @@ def family_sets():
 
 
 def true_chromatic_number():
-    """Reference value: the chromatic number of the Kneser graph of the family, by exact search.
+    """Reference value: the chromatic number of the Kneser graph of the family, computed as a
+    minimum cover by maximal independent sets (a method independent of the oracle's search).
 
-    Vertices are the members of the family, adjacent iff disjoint. For k = 1, 2, ... a complete
-    backtracking search decides whether a proper k-colouring exists; the first k that admits one
-    is the chromatic number (every smaller k was refuted exhaustively)."""
+    Vertices are the members of the family, adjacent iff disjoint, so the independent sets are
+    the pairwise-intersecting subfamilies. Bron–Kerbosch on the intersection graph lists all
+    maximal ones; every colour class lies in one of them, so the chromatic number is the least
+    k such that some k maximal independent sets cover all vertices (checked exhaustively)."""
     _, sets = family_sets()
     masks = [sum(1 << i for i in S) for S in sets]
     m = len(masks)
-    adj = [[j for j in range(m) if j != i and masks[i] & masks[j] == 0] for i in range(m)]
-    order = sorted(range(m), key=lambda i: -len(adj[i]))
+    inter = [sum(1 << j for j in range(m) if j != i and masks[i] & masks[j]) for i in range(m)]
+    maximal = []
 
-    def colourable(k):
-        col = [-1] * m
+    def bron_kerbosch(r, p, x):
+        if p == 0 and x == 0:
+            maximal.append(r)
+            return
+        u = (p | x).bit_length() - 1
+        for v in [v for v in range(m) if p >> v & 1 and not inter[u] >> v & 1]:
+            bron_kerbosch(r | 1 << v, p & inter[v], x & inter[v])
+            p &= ~(1 << v)
+            x |= 1 << v
 
-        def bt(i):
-            if i == m:
-                return True
-            v = order[i]
-            used = {col[u] for u in adj[v] if col[u] >= 0}
-            for c in range(k):
-                if c not in used:
-                    col[v] = c
-                    if bt(i + 1):
-                        return True
-                    col[v] = -1
-            return False
-
-        return bt(0)
-
+    bron_kerbosch(0, (1 << m) - 1, 0)
+    full = (1 << m) - 1
     k = 1
-    while not colourable(k):
+    while not any(functools.reduce(operator.or_, c) == full for c in itertools.combinations(maximal, k)):
         k += 1
     return k
 
@@ -201,7 +201,7 @@ def test_build_from_source():
 
 
 def test_statement_pin_and_instance():
-    """The theorem has exactly the stated type and yields a held-out Petersen-graph (KG(5,2)) zig-zag instance, and the data-part theorem states the true chromatic number of the Kneser graph of `family`, which the verifier computes itself from data/family.json by exact search."""
+    """The theorem has exactly the stated type and yields a held-out Petersen-graph (KG(5,2)) zig-zag instance, and the data-part theorem states the true chromatic number of the Kneser graph of `family`, which the verifier computes itself from data/family.json as a minimum cover by maximal independent sets."""
     (APP / "Check.lean").write_text(check_source())
     r = run(["lake", "env", "lean", "Check.lean"])
     assert r.returncode == 0, f"statement pin / held-out instance failed:\n{(r.stdout + r.stderr)[-6000:]}"

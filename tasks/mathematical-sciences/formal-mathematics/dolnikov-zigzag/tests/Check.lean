@@ -33,7 +33,8 @@ theorem petersen_zigzag (c : Finset (Fin 5) → ℕ)
 
 /-- The data part: the submitted value must be the true chromatic number of the Kneser graph of
 `Zigzag.family` (`/app/data/family.json`). `__FAMILY_K__` is replaced by the verifier with the
-value it computes itself from the data by exact search (`test_outputs.py`), written as `Nat.succ`
+value it computes itself from the data as a minimum cover by maximal independent sets
+(`test_outputs.py`), written as `Nat.succ`
 applications so that instances declared in the submission cannot change it. -/
 theorem family_pin : Zigzag.FamilyChromaticNumber (__FAMILY_K__) :=
   Zigzag.family_chromatic_number
