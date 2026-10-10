@@ -19,8 +19,8 @@ the Mathlib build baked into this image. Checks, in order:
    by maximal independent sets (Bron–Kerbosch), independently of the oracle's method;
 5. axiom audit: the kernel environment is traversed from both theorems and the verifier's
    pins; the axioms reached must be a subset of {propext, Classical.choice, Quot.sound};
-6. kernel re-check: every submitted theorem and definition reachable from those roots is
-   re-added to the environment with kernel type checking enabled.
+6. kernel re-check: every submitted theorem, definition and opaque declaration reachable from
+   those roots is re-added to the environment with kernel type checking enabled.
 """
 import filecmp
 import functools
@@ -250,7 +250,7 @@ open Lean in
 
 
 def test_kernel_recheck():
-    """Every submitted theorem and definition reachable from the theorem is re-added to the environment and re-checked by the Lean kernel (inductive types are kernel-checked when the build adds them, and kernel-bypass options are banned)."""
+    """Every submitted theorem, definition and opaque declaration reachable from the roots is re-added to the environment and re-checked by the Lean kernel (inductive types are kernel-checked when the build adds them, axioms are covered by the axiom audit, and kernel-bypass options are banned)."""
     roots = ", ".join(f"`{x}" for x in ROOTS)
     script = check_source() + f"""
 open Lean in
@@ -291,8 +291,13 @@ open Lean in
         match env.addDeclCore hb rd (.defnDecl {{ v with name := c.appendAfter "__rk" }}) none true with
         | .ok _ => count := count + 1
         | .error _ => throwError "kernel re-check failed for {{c}}"
-      | some (.inductInfo _) | some (.ctorInfo _) | some (.recInfo _) => pure ()
-      | some _ => throwError "declaration {{c}} is not a theorem, definition or inductive type"
+      | some (.opaqueInfo v) =>
+        match env.addDeclCore hb rd (.opaqueDecl {{ v with name := c.appendAfter "__rk" }}) none true with
+        | .ok _ => count := count + 1
+        | .error _ => throwError "kernel re-check failed for {{c}}"
+      -- inductive types, constructors and recursors are kernel-checked when the build adds them;
+      -- axioms are handled by the axiom audit; quotient constants are built in
+      | some _ => pure ()
       | none => pure ()
   IO.println s!"<<recheck-ok {{count}}>>"
 """
