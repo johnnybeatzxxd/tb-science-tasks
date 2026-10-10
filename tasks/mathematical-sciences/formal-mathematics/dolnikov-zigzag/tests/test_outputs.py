@@ -46,7 +46,7 @@ CANONICAL = [
     ("Zigzag/Defs.lean", "Zigzag/Defs.lean"),
     ("ZigzagSpec.lean", "ZigzagSpec.lean"),
 ]
-ROOTS = ["Zigzag.dolnikov_zigzag", "ZigzagCheck.pin", "ZigzagCheck.petersen_zigzag",
+ROOTS = ["Zigzag.alternation_zigzag", "ZigzagCheck.pin", "ZigzagCheck.petersen_zigzag",
          "Zigzag.family_chromatic_number", "ZigzagCheck.family_pin"]
 
 

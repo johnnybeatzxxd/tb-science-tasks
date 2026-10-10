@@ -2,7 +2,7 @@ import Mathlib
 
 namespace Zigzag
 
-/-- Tampered: nothing is monochromatic, so the hypothesis `ht` can never be used. -/
-def Mono {n : ℕ} (col : Fin n → Bool) (A : Finset (Fin n)) : Prop := False
+/-- Tampered: every sign vector has alternation number 0. -/
+def alternation {n : ℕ} (x : Fin n → SignType) : ℕ := 0
 
 end Zigzag

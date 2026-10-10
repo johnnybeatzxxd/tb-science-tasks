@@ -10,7 +10,7 @@ open Zigzag
 /-- The pinned statement: `ZigzagSpec.Statement` is elaborated in a verifier-owned module that
 does not import the submission, so instances or notation in the submission cannot change it. -/
 theorem pin : ZigzagSpec.Statement :=
-  @Zigzag.dolnikov_zigzag
+  @Zigzag.alternation_zigzag
 
 /-- Held-out instance: every proper colouring of the Petersen graph `KG(5, 2)` contains a
 path of three pairs `A – B – C` (A, C disjoint from B) with strictly increasing colours. -/
@@ -21,9 +21,9 @@ theorem petersen_zigzag (c : Finset (Fin 5) → ℕ)
       ∃ B ∈ (Finset.univ : Finset (Fin 5)).powersetCard 2,
       ∃ C ∈ (Finset.univ : Finset (Fin 5)).powersetCard 2,
         c A < c B ∧ c B < c C ∧ Disjoint A B ∧ Disjoint B C := by
-  have ht : ∀ (D : Finset (Fin 5)) (col : Fin 5 → Bool),
-      (∀ A ∈ (Finset.univ : Finset (Fin 5)).powersetCard 2, A ⊆ Dᶜ → ¬ Mono col A) → 3 ≤ D.card := by
-    unfold Mono
+  have ht : ∀ x : Fin 5 → SignType,
+      (∀ A ∈ (Finset.univ : Finset (Fin 5)).powersetCard 2,
+        ¬ (∀ i ∈ A, x i = 1) ∧ ¬ (∀ i ∈ A, x i = -1)) → alternation x + 3 ≤ 5 := by
     decide +kernel
   have p : ZigzagSpec.Statement := pin
   unfold ZigzagSpec.Statement at p

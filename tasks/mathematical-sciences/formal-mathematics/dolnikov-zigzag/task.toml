@@ -5,9 +5,9 @@ artifacts = ["/app/Zigzag/"]
 
 [task]
 name = "terminal-bench-science/dolnikov-zigzag"
-description = "Formalize the Dol'nikov–Simonyi–Tardos zig-zag theorem (Ky Fan's lemma for Kneser graphs of arbitrary set systems) as an axiom-free Lean 4 / Mathlib proof."
+description = "Formalize the zig-zag theorem for Kneser graphs of arbitrary set systems under the alternation-number bound (Ky Fan's lemma) as an axiom-free Lean 4 / Mathlib proof, and use it to determine the chromatic number of a given set system."
 authors = [{ name = "Salim Abdlselam", email = "salim.a@turing.com" }]
-keywords = ["lean4", "mathlib", "kneser-graph", "zig-zag-theorem", "ky-fan-lemma", "topological-combinatorics"]
+keywords = ["lean4", "mathlib", "kneser-graph", "zig-zag-theorem", "alternation-number", "ky-fan-lemma", "topological-combinatorics"]
 
 [metadata]
 author_name = "Salim Abdlselam"

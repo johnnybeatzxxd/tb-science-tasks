@@ -21,7 +21,7 @@ lemma lam_natAbs_big (s : ℕ) {x : Finset (Fin n × Bool)} (hb : Big F x) :
   split_ifs <;> omega
 
 lemma lam_natAbs_small (s : ℕ) {x : Finset (Fin n × Bool)} (hb : ¬ Big F x) :
-    (lam F c s x).natAbs = x.card := by
+    (lam F c s x).natAbs = altF x := by
   unfold lam
   rw [if_neg hb]
   split_ifs <;> simp
@@ -38,61 +38,30 @@ lemma lam_pos_big (s : ℕ) {x : Finset (Fin n × Bool)} (hb : Big F x) :
 
 theorem zigzag_main (F : Finset (Finset (Fin n))) (c : Finset (Fin n) → ℕ)
     (hc : ∀ A ∈ F, ∀ B ∈ F, Disjoint A B → c A ≠ c B) (t : ℕ)
-    (ht : ∀ (D : Finset (Fin n)) (col : Fin n → Bool),
-      (∀ A ∈ F, A ⊆ Dᶜ → ¬ Mono col A) → t ≤ D.card) :
+    (ht : ∀ x : Fin n → SignType,
+      (∀ A ∈ F, ¬ (∀ i ∈ A, x i = 1) ∧ ¬ (∀ i ∈ A, x i = -1)) → alternation x + t ≤ n) :
     ∃ f : Fin t → Finset (Fin n), (∀ i, f i ∈ F) ∧ (∀ i j, i < j → c (f i) < c (f j)) ∧
       ∀ i j : Fin t, ((i : ℕ) + j) % 2 = 1 → Disjoint (f i) (f j) := by
   have hempty : ∅ ∉ F := fun h => hc ∅ h ∅ h (by simp) rfl
   have htn : t ≤ n := by
-    have := ht univ (fun _ => true) (by
-      intro A hA hsub
-      have : A = ∅ := by simpa using hsub
-      exact absurd (this ▸ hA) hempty)
-    simpa using this
+    have h0 := ht (fun _ => 0) (by
+      intro A hA
+      obtain ⟨a, ha⟩ := Finset.nonempty_iff_ne_empty.2 (fun h => hempty (h ▸ hA))
+      exact ⟨fun h => absurd (h a ha) (by decide), fun h => absurd (h a ha) (by decide)⟩)
+    have hz : alternation (n := n) (fun _ => 0) = 0 := by
+      simp [alternation, signSeq, blockCount]
+    omega
   set s := n - t with hs_def
   have hst : s + t = n := by omega
-  have hs : ∀ x : Finset (Fin n × Bool), Valid x → ¬ Big F x → x.card ≤ s := by
+  have hs : ∀ x : Finset (Fin n × Bool), Valid x → ¬ Big F x → altF x ≤ s := by
     intro x hx hb
-    have := ht (univ.filter (fun i => (i, true) ∉ x ∧ (i, false) ∉ x)) (fun i => decide ((i, true) ∈ x)) (by
-      intro A hA hsub hmono
-      apply hb
-      refine ⟨A, hA, ?_⟩
-      by_cases hAe : A = ∅
-      · subst hAe; exact Or.inl (by simp)
-      obtain ⟨a, ha⟩ := Finset.nonempty_iff_ne_empty.2 hAe
-      have hsup : ∀ i ∈ A, (i, true) ∈ x ∨ (i, false) ∈ x := by
-        intro i hi
-        have := hsub hi
-        simp only [mem_compl, mem_filter, mem_univ, true_and, not_and, not_not] at this
-        by_cases h : (i, true) ∈ x
-        · exact Or.inl h
-        · exact Or.inr (this h)
-      by_cases hpa : (a, true) ∈ x
-      · left
-        intro i hi
-        rw [mem_posS]
-        have := hmono i hi a ha
-        simp only [decide_eq_decide] at this
-        exact this.2 hpa
-      · right
-        intro i hi
-        rw [mem_negP]
-        have := hmono i hi a ha
-        simp only [decide_eq_decide] at this
-        rcases hsup i hi with h | h
-        · exact absurd (this.1 h) hpa
-        · exact h)
-    have hcard := card_eq_pos_add_neg x
-    have hdisj := disjoint_posS_negP hx
-    have hcompl : (univ.filter (fun i => (i, true) ∉ x ∧ (i, false) ∉ x)).card + (x.card) = n := by
-      have : (univ.filter (fun i => (i, true) ∉ x ∧ (i, false) ∉ x)) =
-          (posS x ∪ negP x)ᶜ := by
-        ext i; simp [mem_posS, mem_negP]
-      rw [this, card_compl, hcard, card_union_of_disjoint hdisj]
-      have := card_le_univ (posS x ∪ negP x)
-      rw [card_union_of_disjoint hdisj] at this
-      simp at this ⊢
-      omega
+    have := ht (toSign x) (by
+      intro A hA
+      refine ⟨fun hpos => hb ⟨A, hA, Or.inl fun i hi => ?_⟩,
+              fun hneg => hb ⟨A, hA, Or.inr fun i hi => ?_⟩⟩
+      · rw [mem_posS]; exact toSign_eq_one.1 (hpos i hi)
+      · rw [mem_negP]; exact (toSign_eq_neg_one hx).1 (hneg i hi))
+    unfold altF
     omega
   have hanti : ∀ x, Valid x → lam F c s (negS x) = - lam F c s x := fun x hx => lam_negS hc s hx
   have hcomp : ∀ x y, Valid x → Valid y → x ⊆ y → lam F c s x + lam F c s y ≠ 0 :=

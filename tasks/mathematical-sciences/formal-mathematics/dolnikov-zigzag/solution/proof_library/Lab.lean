@@ -1,4 +1,5 @@
 import Zigzag.FanStep
+import Zigzag.Alt
 
 /-!
 # The labelling for a set system with a proper colouring of its Kneser graph
@@ -91,27 +92,6 @@ lemma Valid.negS {x : Finset (Fin n × Bool)} (hx : Valid x) : Valid (negS x) :=
   · rw [mem_negS, mem_negS] at h
     exact hx.2 i ⟨h.2, h.1⟩
 
-/-- The sign of the first coordinate of `x`. -/
-def firstSign (x : Finset (Fin n × Bool)) : Prop :=
-  if h : x.Nonempty then ((x.image Prod.fst).min' (h.image _), true) ∈ x else False
-
-lemma firstSign_negS {x : Finset (Fin n × Bool)} (hx : Valid x) :
-    firstSign (negS x) ↔ ¬ firstSign x := by
-  have hne := hx.1
-  have hne' : (negS x).Nonempty := hx.negS.1
-  have himg : (negS x).image Prod.fst = x.image Prod.fst := by
-    ext i; simp [negS]; tauto
-  unfold firstSign
-  rw [dif_pos hne, dif_pos hne']
-  have hmin : ((negS x).image Prod.fst).min' (hne'.image _) = (x.image Prod.fst).min' (hne.image _) := by
-    congr 1
-  rw [hmin, mem_negS]
-  set i0 := (x.image Prod.fst).min' (hne.image _)
-  have hi0 : i0 ∈ x.image Prod.fst := min'_mem _ _
-  obtain ⟨⟨j, b⟩, hjb, rfl⟩ := mem_image.1 hi0
-  have h2 := hx.2 i0
-  cases b <;> simp_all
-
 variable (F : Finset (Finset (Fin n))) (c : Finset (Fin n) → ℕ)
 
 /-- A signed set is big if one of its two sides contains a member of `F`. -/
@@ -132,7 +112,7 @@ def lam (s : ℕ) (x : Finset (Fin n × Bool)) : ℤ :=
   if Big F x then
     (if PosMax F c x then ((s + 1 + cstar F c x : ℕ) : ℤ) else -((s + 1 + cstar F c x : ℕ) : ℤ))
   else
-    (if firstSign x then (x.card : ℤ) else -(x.card : ℤ))
+    (if firstSign x then (altF x : ℤ) else -(altF x : ℤ))
 
 variable {F c}
 
@@ -208,7 +188,7 @@ theorem lam_negS (s : ℕ) {x : Finset (Fin n × Bool)} (hx : Valid x) :
         rw [PosMax_negS]; exact (not_posMax_iff hc hx hb).1 hp
       rw [if_neg hp, if_pos this]; simp
   · have hb' : ¬ Big F (negS x) := fun h => hb ((Big_negS x).1 h)
-    rw [if_neg hb, if_neg hb', card_negS]
+    rw [if_neg hb, if_neg hb', altF_negS hx]
     by_cases hf : firstSign x
     · have : ¬ firstSign (negS x) := by rw [firstSign_negS hx]; exact fun h => h hf
       rw [if_pos hf, if_neg this]
@@ -218,12 +198,12 @@ theorem lam_negS (s : ℕ) {x : Finset (Fin n × Bool)} (hx : Valid x) :
 omit hc in
 lemma lam_ne_zero (s : ℕ) {x : Finset (Fin n × Bool)} (hx : Valid x) : lam F c s x ≠ 0 := by
   unfold lam
-  have hpos : 0 < x.card := card_pos.2 hx.1
+  have hpos : 0 < altF x := altF_pos hx
   have h1 : (0 : ℤ) < ((s + 1 + cstar F c x : ℕ) : ℤ) := Nat.cast_pos.2 (by omega)
-  have h2 : (0 : ℤ) < (x.card : ℤ) := Nat.cast_pos.2 hpos
+  have h2 : (0 : ℤ) < (altF x : ℤ) := Nat.cast_pos.2 hpos
   split_ifs <;> omega
 
-variable (s : ℕ) (hs : ∀ x : Finset (Fin n × Bool), Valid x → ¬ Big F x → x.card ≤ s)
+variable (s : ℕ) (hs : ∀ x : Finset (Fin n × Bool), Valid x → ¬ Big F x → altF x ≤ s)
 include hs
 
 /-- The labelling has no complementary edge. -/
@@ -262,17 +242,19 @@ theorem lam_hcomp {x y : Finset (Fin n × Bool)} (hx : Valid x) (hy : Valid y) (
       unfold lam at h0
       rw [if_neg hbx, if_pos hby] at h0
       split_ifs at h0 <;> omega
-    · by_cases hxy' : x = y
-      · subst hxy'
-        intro h0
-        exact lam_ne_zero (F := F) (c := c) s hx (by omega)
-      · intro h0
-        have hlt : x.card < y.card := card_lt_card (Finset.ssubset_iff_subset_ne.2 ⟨hxy, hxy'⟩)
-        have hpos : 0 < x.card := card_pos.2 hx.1
-        unfold lam at h0
-        rw [if_neg hbx, if_neg hby] at h0
-        split_ifs at h0 <;> omega
-
+    · intro h0
+      have hpx := altF_pos hx
+      have hpy := altF_pos hy
+      obtain ⟨-, hsame⟩ := altF_mono hx hy hxy
+      unfold lam at h0
+      rw [if_neg hbx, if_neg hby] at h0
+      by_cases hfx : firstSign x <;> by_cases hfy : firstSign y
+      · rw [if_pos hfx, if_pos hfy] at h0; omega
+      · rw [if_pos hfx, if_neg hfy] at h0
+        exact hfy ((hsame (by omega)).1 hfx)
+      · rw [if_neg hfx, if_pos hfy] at h0
+        exact hfx ((hsame (by omega)).2 hfy)
+      · rw [if_neg hfx, if_neg hfy] at h0; omega
 end
 
 end Zigzag

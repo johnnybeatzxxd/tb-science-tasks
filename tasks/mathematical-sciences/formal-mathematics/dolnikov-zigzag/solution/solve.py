@@ -4,16 +4,20 @@ Reads the starter project in /app, checks that the goal and the definitions are 
 proof library was written for, installs the library modules, derives the proof of the goal
 from the parsed theorem statement, builds the project and audits the axioms of the result.
 
-For the data part it reads /app/data/family.json, computes the 2-colourability defect t of the
-set system and the chromatic number k of its Kneser graph together with a proper k-colouring,
-and, when t = k, writes a Lean proof of `FamilyChromaticNumber k`: the colouring gives the upper
-bound, and the zig-zag theorem applied with the defect t gives the lower bound.
+For the data part it reads /app/data/family.json and computes, by search, the largest
+alternation number a of a sign vector whose positive and negative parts contain no member of the
+set system (so t = n - a is the alternation bound), and the chromatic number k of its Kneser
+graph together with a proper k-colouring. When t = k it writes a Lean proof of
+`FamilyChromaticNumber k`: the colouring gives the upper bound, and the zig-zag theorem applied
+with the alternation bound t gives the lower bound.
 
 The proof library (/solution/proof_library/*.lean) is the Lean source of the argument:
 Ky Fan's parity lemma for alternating chains of the cross-polytope (FanLabels, FanTucker,
-FanStep), the antipodal labelling built from the colouring (Lab), the extraction of the
+FanStep), monotonicity of alternation numbers (Alt), the antipodal labelling built from the
+colouring (Lab), the extraction of the
 zig-zag from an alternating chain (Extract) and the assembled theorem `zigzag_main` (Main).
 """
+import itertools
 import json
 import os
 import re
@@ -24,7 +28,7 @@ from pathlib import Path
 
 APP = Path(os.environ.get("APP", "/app"))
 LIB = Path(__file__).resolve().parent / "proof_library"
-MODULES = ["FanLabels", "FanTucker", "FanStep", "Lab", "Extract", "Main"]
+MODULES = ["FanLabels", "FanTucker", "FanStep", "Alt", "Lab", "Extract", "Main"]
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -38,10 +42,10 @@ def norm(s):
 
 
 def parse_goal(text):
-    """Return (signature, binder names) of `dolnikov_zigzag` in the starter Goal.lean."""
-    m = re.search(r"theorem\s+dolnikov_zigzag\s*(.*?):=\s*by\s*\n\s*sorry\b", text, re.S)
+    """Return (signature, binder names) of `alternation_zigzag` in the starter Goal.lean."""
+    m = re.search(r"theorem\s+alternation_zigzag\s*(.*?):=\s*by\s*\n\s*sorry\b", text, re.S)
     if not m:
-        fail("could not find `theorem dolnikov_zigzag ... := by sorry` in Goal.lean")
+        fail("could not find `theorem alternation_zigzag ... := by sorry` in Goal.lean")
     sig = m.group(1)
     names, depth, start = [], 0, None
     for i, ch in enumerate(sig):
@@ -61,10 +65,17 @@ def parse_goal(text):
 
 
 def check_defs(text):
-    m = re.search(r"def\s+Mono\s*\{n\s*:\s*ℕ\}\s*\(col\s*:\s*Fin n → Bool\)\s*\(A\s*:\s*Finset \(Fin n\)\)"
-                  r"\s*:\s*Prop\s*:=\s*(.*?)\n\s*\n", text, re.S)
-    if not m or norm(m.group(1)) != "∀ i ∈ A, ∀ j ∈ A, col i = col j":
-        fail("Defs.lean does not define `Mono` as the proof library expects")
+    """The definitions the proof library relies on must be the expected ones."""
+    expected = [
+        r"def blockCount \{α : Type\*\} \[DecidableEq α\] : List α → ℕ\s*\| \[\] => 0\s*\| \[_\] => 1\s*"
+        r"\| a :: b :: l => blockCount \(b :: l\) \+ if a = b then 0 else 1",
+        r"def signSeq \{n : ℕ\} \(x : Fin n → SignType\) : List SignType :=\s*"
+        r"\(\(List\.finRange n\)\.map x\)\.filter \(· ≠ 0\)",
+        r"def alternation \{n : ℕ\} \(x : Fin n → SignType\) : ℕ :=\s*blockCount \(signSeq x\)",
+    ]
+    for pat in expected:
+        if not re.search(pat, text):
+            fail("Defs.lean does not define alternation numbers as the proof library expects")
 
 
 def check_statement(sig):
@@ -91,19 +102,19 @@ def check_family_matches_defs(n, sets, defs_text):
         fail("`family` in Defs.lean differs from data/family.json")
 
 
-def defect(n, F):
-    """Largest t such that every (D, col) with no monochromatic member of F inside D^c has |D| >= t."""
-    best = n
-    full = (1 << n) - 1
-    for col in range(1 << n):
-        for D in range(1 << n):
-            pc = bin(D).count("1")
-            if pc >= best:
-                continue
-            Dc = full & ~D
-            if all(not (A & ~Dc == 0 and (A & col) in (0, A)) for A in F):
-                best = pc
-    return best
+def alternation_bound(n, F):
+    """n minus the largest alternation number of a sign vector x (entries in {-1, 0, 1}) whose
+    positive part and negative part contain no member of F."""
+    best = 0
+    for x in itertools.product((0, 1, -1), repeat=n):
+        pos = sum(1 << i for i in range(n) if x[i] == 1)
+        neg = sum(1 << i for i in range(n) if x[i] == -1)
+        if any(A & ~pos == 0 or A & ~neg == 0 for A in F):
+            continue
+        nz = [a for a in x if a]
+        alt = 1 + sum(1 for i in range(len(nz) - 1) if nz[i] != nz[i + 1]) if nz else 0
+        best = max(best, alt)
+    return n - best
 
 
 def colouring(F, k):
@@ -146,10 +157,10 @@ theorem familyColour_proper :
 theorem family_nonempty : ∀ A ∈ family, A.Nonempty := by
   decide +kernel
 
-/-- The 2-colourability defect of `family` is at least {k}. -/
-theorem family_defect : ∀ (D : Finset (Fin {n})) (col : Fin {n} → Bool),
-    (∀ A ∈ family, A ⊆ Dᶜ → ¬ Mono col A) → {k} ≤ D.card := by
-  unfold Mono
+/-- The alternation bound for `family`: every sign vector whose positive and negative parts
+contain no member of `family` has alternation number at most {n - k}. -/
+theorem family_alternation : ∀ x : Fin {n} → SignType,
+    (∀ A ∈ family, ¬ (∀ i ∈ A, x i = 1) ∧ ¬ (∀ i ∈ A, x i = -1)) → alternation x + {k} ≤ {n} := by
   decide +kernel
 
 theorem family_colorable : (kneserGraphOf family).Colorable {k} :=
@@ -159,7 +170,7 @@ theorem family_colorable : (kneserGraphOf family).Colorable {k} :=
     · exact familyColour_proper _ A.2 _ B.2 h
     · exact (familyColour_proper _ B.2 _ A.2 h).symm)⟩
 
-/-- No proper colouring with {k - 1} colours: the zig-zag theorem with the defect bound {k}
+/-- No proper colouring with {k - 1} colours: the zig-zag theorem with the alternation bound {k}
 gives {k} members of `family` with strictly increasing colours. -/
 theorem family_not_colorable : ¬ (kneserGraphOf family).Colorable {k - 1} := by
   rintro ⟨C⟩
@@ -181,7 +192,7 @@ theorem family_not_colorable : ¬ (kneserGraphOf family).Colorable {k - 1} := by
     apply C.valid hadj
     simp only [c, hA, hB, dite_true] at hcAB
     exact Fin.ext hcAB
-  obtain ⟨f, hf, hinc, -⟩ := dolnikov_zigzag family c hc {k} family_defect
+  obtain ⟨f, hf, hinc, -⟩ := alternation_zigzag family c hc {k} family_alternation
 {chain}
   have hlast := hlt _ (hf {k - 1})
   omega
@@ -204,13 +215,13 @@ def main():
     n, sets = family_from_json()
     check_family_matches_defs(n, sets, (APP / "Zigzag" / "Defs.lean").read_text())
     F = [sum(1 << i for i in S) for S in sets]
-    t = defect(n, F)
+    t = alternation_bound(n, F)
     k = 1
     while colouring(F, k) is None:
         k += 1
-    print(f"oracle: family.json: defect t = {t}, chromatic number k = {k}")
+    print(f"oracle: family.json: alternation bound t = {t}, chromatic number k = {k}")
     if t != k:
-        fail("the defect bound does not match the chromatic number; this oracle needs t = k")
+        fail("the alternation bound does not match the chromatic number; this oracle needs t = k")
     family_src = family_proof(n, sets, k, colouring(F, k))
 
     for mod in MODULES:
@@ -229,7 +240,7 @@ def main():
         fail("lake build failed or a declaration uses sorry:\n" + (r.stdout + r.stderr)[-4000:])
 
     probe = APP / "OracleAxioms.lean"
-    probe.write_text("import Zigzag.Goal\n#print axioms Zigzag.dolnikov_zigzag\n"
+    probe.write_text("import Zigzag.Goal\n#print axioms Zigzag.alternation_zigzag\n"
                      "#print axioms Zigzag.family_chromatic_number\n")
     try:
         r = subprocess.run(["lake", "env", "lean", probe.name], cwd=APP, capture_output=True, text=True)
@@ -242,7 +253,7 @@ def main():
     axioms = {a.strip() for rep in reports for a in rep.split(",") if a.strip()}
     if not axioms <= ALLOWED_AXIOMS:
         fail(f"disallowed axioms: {sorted(axioms - ALLOWED_AXIOMS)}")
-    print(f"oracle: Zigzag.dolnikov_zigzag and Zigzag.family_chromatic_number ({k}) proved; "
+    print(f"oracle: Zigzag.alternation_zigzag and Zigzag.family_chromatic_number ({k}) proved; "
           f"axioms {sorted(axioms)}")
 
 
