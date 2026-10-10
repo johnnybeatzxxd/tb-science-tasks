@@ -28,6 +28,9 @@ timeout_sec = 1200.0  # rebuild of the submission from source + three `lake env 
 
 [verifier.environment]
 network_mode = "no-network"
+cpus = 4
+memory_mb = 8192  # the verifier recompiles the submission against Mathlib; 1 GB is not enough (Lean is OOM-killed)
+storage_mb = 10240
 
 [agent]
 timeout_sec = 18000
