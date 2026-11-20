@@ -1,0 +1,202 @@
+== exact algebraic candidates (minimal polynomial, root index) ==
+w01 x: branch x**4 + 834*x**3/317 - 14737045*x**2/1246444 + 2359503*x/311611 + 19853/311611#3
+w01 y: branch x**4 + 982*x**3/277 - 14737045*x**2/1089164 + 2118989*x/272291 + 124725/272291#3; own x**5 + 139224625*x**4/657739969 + 3186349705*x**3/657739969 - 4248965567*x**2/657739969 - 1081292038*x/657739969 - 47182902/657739969#2
+w02 x: branch x - 43/20#0
+w02 y: branch x**3 - 12006225*x**2/5405788 + 1282588*x/1351447 - 3969/1351447#2; own x**5 + 6323853*x**4/25499 - 15610925*x**3/25499 + 81607991*x**2/25499 - 97482015*x/25499 - 10912625/25499#2
+w03 x: branch x - 5/4#0; own x - 5/4#0 (= branch)
+w03 y: branch x**4 - 121*x**3/9 + 10753*x**2/324 - 1936*x/81 + 256/81#2
+w04 x: branch x**3 - 19*x**2/2 + 361*x/16 - 27/2#1; own x - 9/4#0
+w04 y: branch x**3 - 361*x**2/144 + 19*x/12 - 1/4#2; own x - 3/2#0
+w05 x: branch x - 17/10#0
+w05 y: branch x**4 - 373584*x**3/34969 + 1820710*x**2/104907 - 4330864*x/944163 - 62278751/25492401#2; own x**5 - 5704519*x**4/1296338 - 165290263*x**3/3889014 + 118960897*x**2/3889014 + 1058832685*x/35001126 + 189767800/17500563#1
+w06 x: branch x**4 - 19*x**3/2 + 353*x**2/16 - 57*x/4 + 9/4#2
+w06 y: branch x**4 - 19*x**3 + 293*x**2/4 - 133*x/2 + 49/4#2; own x**2 - 24*x/7 + 3/7#1
+w07 x: branch x**4 - 32*x**3/5 + 248*x**2/25 - 128*x/25 + 16/25#2
+w07 y: branch x**4 - 32*x**3/3 + 200*x**2/9 - 128*x/9 + 16/9#2
+w08 x: branch x**4 + 6970824*x**3/409999 - 14920806*x**2/409999 + 6238056*x/409999 - 196249/409999#3; own x**5 - 53649*x**4/15934 - 28311833*x**3/2047519 + 143102164*x**2/2047519 - 113662016*x/2047519 - 47718375/4095038#2
+w08 y: branch x**4 - 391732*x**3/31329 + 1323049*x**2/41772 - 1957765*x/125316 - 753973/167088#2; own x**5 - 3035080213*x**4/231641536 + 3385950705*x**3/231641536 + 209002037*x**2/231641536 + 188677185*x/57910384 + 177514073/231641536#1
+w09 x: branch x - 39/20#0; own x - 39/20#0 (= branch)
+w09 y: branch x**4 - 3549*x**3/278 + 53240733*x**2/1545680 - 72963891*x/3091360 + 12595401/4946176#2; own x - 21/10#0
+w10 x: branch x**4 - 200*x**3/9 + 448*x**2/9 - 320*x/9 + 64/9#2; own x - 8/7#0
+w10 y: branch x - 5/4#0; own x - 5/4#0 (= branch)
+w11 x: branch x**4 - 20*x**3 + 79*x**2 - 60*x + 9#2; own x**2 - 19*x/8 - 55/8#1
+w11 y: branch x**4 - 40*x**3/3 + 406*x**2/9 - 40*x + 9#2; own x**2 - 23*x/11 + 20/33#1
+w12 x: branch x**4 - 63*x**3/4 + 137*x**2/4 - 39*x/2 + 9/4#2; own x - 6/5#0
+w12 y: branch x**4 - 29*x**3/2 + 167*x**2/4 - 143*x/4 + 121/16#2
+w13 x: branch x**4 - 20957*x**3/2744 + 14109953089*x**2/1084253184 - 13210725*x/1882384 + 75625/117649#2; own x - 50/49#0
+w13 y: branch x**4 - 24631*x**3/1176 + 11314365889*x**2/271063296 - 16602125*x/691488 + 15625/7056#2; own x - 25/24#0
+w14 x: branch x - 5#0; own x - 5#0 (= branch)
+w14 y: branch x - 5#0; own x - 5#0 (= branch)
+w15 x: branch x**4 - 90*x**3/7 + 118525*x**2/3969 - 10900*x/567 + 100/81#2; own x - 5/3#0
+w15 y: branch x**4 - 575*x**3/21 + 114745*x**2/1764 - 6175*x/147 + 225/49#2; own x - 10/7#0
+w16 x: branch x**4 + 3400*x**3/579 - 9526*x**2/579 + 4544*x/579 + 922/579#3; own x - 47/35#0
+w16 y: branch x**4 + 4198*x**3/817 - 11422*x**2/817 + 6298*x/817 - 35/817#3; own x**5 + 68015*x**4/7529 + 281780*x**3/7529 + 82052*x**2/7529 - 550528*x/7529 - 91234/7529#2
+w17 x: branch x**4 - 286*x**3/5 + 3056*x**2/25 - 1891*x/25 + 961/100#2; own x - 31/30#0
+w17 y: branch x**4 - 92*x**3/5 + 3821*x**2/100 - 2501*x/100 + 1681/400#2; own x - 41/40#0
+w18 x: branch x - 5/4#0; own x - 5/4#0 (= branch)
+w18 y: branch x**4 - 157691*x**3/7220 + 13826809*x**2/144400 - 728433*x/9025 + 531441/36100#2; own x**5 - 20575853*x**4/951139 + 58129082*x**3/951139 - 39744769*x**2/951139 + 20504419*x/951139 - 300024/135877#1
+w19 x: branch x**4 - 222456272*x**3/25294605 + 6549663288005296*x**2/639817042106025 - 57/25#2; own x - 21/20#0
+w19 y: branch x**3 + 5058921*x**2/6057080 - 409353955500331*x/57454292270025 + 32039833/6057080#2; own x - 409/400#0
+w20 x: branch x - 8/5#0
+w20 y: branch x**4 - 71489072*x**3/105125 + 765610512*x**2/525625 - 428016016*x/525625 + 8150576/105125#2; own x - 11/10#0
+w21 x: branch x**4 - 28*x**3 + 113*x**2 - 110*x + 25#2
+w21 y: branch x**4 - 172*x**3/9 + 440*x**2/9 - 88*x/3 + 4#2; own x - 3/2#0
+w22 x: branch x - 5/2#0
+w22 y: branch x**3 + 4369813*x**2/518080 - 101188329*x/2590400 + 38905/1619#2; own x - 8/5#0
+w23 x: branch x**4 - 630*x**3 + 8567*x**2 - 8226*x + 289#2; own x - 16/3#0
+w23 y: branch x**4 - 8462*x**3/1369 + 11351*x**2/1369 - 2906*x/1369 + 169/1369#2; own x**5 - 73775*x**4/1564 - 434831*x**3/3128 + 138573*x**2/1564 + 80131*x/391 + 5300/391#3
+w24 x: branch x**4 - 159848*x**3/19629 + 1595604414404*x**2/86691969225 - 781005179552*x/86691969225 + 20760498772/86691969225#2; own x - 53/20#0
+w24 y: branch x**3 - 6890443*x**2/588870 + 13278359*x/1177740 - 104622678853/94129691760#2; own x - 9/5#0
+w25 x: branch x - 3/2#0; own x - 3/2#0 (= branch)
+w25 y: branch x**4 - 10*x**3 + 53*x**2/2 - 45*x/2 + 81/16#2
+w26 x: branch x**4 - 5319*x**3/245 + 790259*x**2/14700 - 754283*x/22050 + 49129/35280#2
+w26 y: branch x**4 + 1022146*x**3/24631 - 2101038*x**2/24631 + 1005579*x/24631 - 145161/98524#3; own x**5 - 71993*x**4/14368 + 235369429*x**3/32256160 + 53027917*x**2/25804928 - 782642259*x/129024640 - 29310903/64512320#2
+w27 x: branch x**4 - 803132*x**3/9503 + 162036*x**2/731 - 258240*x/9503 + 4631104/5540249#2; own x - 12/5#0
+w27 y: branch x**3 - 286316547*x**2/1641976 + 185859817*x/1641976 + 312357991/6567904#2; own x - 11/4#0
+w28 x: branch x**4 - 306084*x**3/121 + 4558041*x**2/484 - 671724*x/121 - 14661/11#2
+w28 y: branch x**4 - 3701698*x**3/13901 + 6438375*x**2/13901 - 2754378*x/13901 + 227529/13901#2; own x**5 - 229647211*x**4/11002337 + 1783572258*x**3/11002337 - 1499551161*x**2/11002337 - 267197854*x/11002337 + 32565897/11002337#2
+w29 x: branch x - 419/400#0; own x - 419/400#0 (= branch)
+w29 y: branch x**4 - 8794502223382149744435375*x**3/1384494422861110847820889 + 72747204654716029*x**2/8919190783796768 - 1621117961926246147420875*x/1384494422861110847820889 - 14544585672707797/8919190783796768#2
+w30 x: branch x - 3#0; own x - 3#0 (= branch)
+w30 y: branch x**4 - 112*x**3 + 378*x**2 - 280*x + 49#2; own x - 7/3#0
+w31 x: branch x**3 - 3601*x**2/588 + 12967201*x/1382976 - 625/147#1; own x - 50/49#0
+w31 y: branch x**3 - 12967201*x**2/5644800 + 3601*x/2304 - 1225/4608#2
+== exact product forms ==
+(Jackson and tandem walks of the file are identified in check_promises.txt; their product-form rates are reproduced in check_literature.txt and below)
+w10 x_marginal paired-arrival M/M/1 rho=7/8: agrees
+w10 y_marginal paired-arrival M/M/1 rho=4/5: agrees
+w12 x_marginal paired-arrival M/M/1 rho=5/6: agrees
+w12 y_marginal paired-arrival M/M/1 rho=5/11: agrees
+w14 x_marginal paired-arrival M/M/1 rho=1/5: agrees
+w14 y_marginal paired-arrival M/M/1 rho=1/5: agrees
+w17 x_marginal paired-arrival M/M/1 rho=30/31: agrees
+w17 y_marginal paired-arrival M/M/1 rho=40/41: agrees
+w21 x_marginal paired-arrival M/M/1 rho=3/10: agrees
+w21 y_marginal paired-arrival M/M/1 rho=2/3: agrees
+w30 x_marginal paired-arrival M/M/1 rho=1/3: agrees
+w30 y_marginal paired-arrival M/M/1 rho=3/7: agrees
+== block-GTH truncations: kappa_n with the reference rho ==
+w01 x_boundary rho 0.589821 kappa  -3/2 | N=200 | competitor gap 1.4e-03 | kappa_n 20:-0.386 33:-0.450 50:-0.506 66:-0.544
+w01 y_boundary rho 0.831196 kappa     0 | N=200 | competitor gap 1.4e-03 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:-0.000
+w01 x_marginal rho 0.589821 kappa  -3/2 | N=200 | competitor gap 1.4e-03 | kappa_n 20:-0.115 33:-0.155 50:-0.196 66:-0.228
+w01 y_marginal rho 0.831196 kappa     0 | N=200 | competitor gap 1.4e-03 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:+0.000
+w02 x_boundary rho 0.465116 kappa  -3/2 | N=200 | competitor gap 3.8e-02 | kappa_n 20:-0.624 33:-0.725 50:-0.813 66:-0.872
+w02 y_boundary rho 0.689036 kappa     0 | N=200 | competitor gap 3.8e-02 | kappa_n 20:-0.006 33:-0.001 50:-0.000 66:-0.000
+w02 x_marginal rho 0.465116 kappa  -1/2 | N=200 | competitor gap 3.8e-02 | kappa_n 20:-0.167 33:-0.204 50:-0.237 66:-0.261
+w02 y_marginal rho 0.689036 kappa     0 | N=200 | competitor gap 3.8e-02 | kappa_n 20:-0.005 33:-0.001 50:-0.000 66:-0.000
+w03 x_boundary rho 0.800000 kappa  -1/2 | N=200 | competitor gap 5.0e-04 | kappa_n 20:-0.511 33:-0.510 50:-0.508 66:-0.507
+w03 y_boundary rho 0.562217 kappa  -3/2 | N=200 | competitor gap 5.0e-04 | kappa_n 20:-1.194 33:-1.287 50:-1.346 66:-1.378
+w03 x_marginal rho 0.800000 kappa  -1/2 | N=200 | competitor gap 5.0e-04 | kappa_n 20:-0.450 33:-0.468 50:-0.478 66:-0.483
+w03 y_marginal rho 0.562500 kappa     0 | N=200 | competitor gap 5.0e-04 | kappa_n 20:-0.333 33:-0.339 50:-0.335 66:-0.327
+w04 x_boundary rho 0.444444 kappa     0 | N=200 | competitor gap 4.7e-02 | kappa_n 20:+0.000 33:+0.000 50:-0.000 66:+0.000
+w04 y_boundary rho 0.666667 kappa     0 | N=200 | competitor gap 4.7e-02 | kappa_n 20:-0.000 33:+0.000 50:+0.000 66:+0.000
+w04 x_marginal rho 0.444444 kappa     0 | N=200 | competitor gap 4.7e-02 | kappa_n 20:+0.000 33:+0.000 50:-0.000 66:+0.000
+w04 y_marginal rho 0.666667 kappa     0 | N=200 | competitor gap 4.7e-02 | kappa_n 20:-0.000 33:+0.000 50:+0.000 66:+0.000
+w05 x_boundary rho 0.588235 kappa  -3/2 | N=200 | competitor gap 3.9e-02 | kappa_n 20:-0.811 33:-0.915 50:-1.002 66:-1.058
+w05 y_boundary rho 0.770906 kappa     0 | N=200 | competitor gap 3.9e-02 | kappa_n 20:-0.055 33:-0.025 50:-0.010 66:-0.004
+w05 x_marginal rho 0.588235 kappa  -1/2 | N=200 | competitor gap 3.9e-02 | kappa_n 20:-0.231 33:-0.274 50:-0.310 66:-0.333
+w05 y_marginal rho 0.770906 kappa     0 | N=200 | competitor gap 3.9e-02 | kappa_n 20:-0.018 33:-0.009 50:-0.004 66:-0.002
+w06 x_boundary rho 0.455340 kappa  -3/2 | N=200 | competitor gap 4.6e-04 | kappa_n 20:-0.435 33:-0.462 50:-0.478 66:-0.488
+w06 y_boundary rho 0.303154 kappa     0 | N=200 | competitor gap 4.6e-04 | kappa_n 20:-0.009 33:-0.002 50:-0.000 66:-0.000
+w06 x_marginal rho 0.455340 kappa  -3/2 | N=200 | competitor gap 4.6e-04 | kappa_n 20:-0.403 33:-0.439 50:-0.462 66:-0.474
+w06 y_marginal rho 0.303154 kappa     0 | N=200 | competitor gap 4.6e-04 | kappa_n 20:+0.007 33:+0.002 50:+0.000 66:+0.000
+w07 x_boundary rho 0.944506 kappa  -3/2 | N=216 | competitor gap 7.9e-04 | kappa_n 21:-0.561 36:-0.564 54:-0.568 72:-0.573
+w07 y_boundary rho 0.715041 kappa  -3/2 | N=216 | competitor gap 7.9e-04 | kappa_n 21:-1.154 36:-1.258 54:-1.320 72:-1.356
+w07 x_marginal rho 0.944506 kappa  -3/2 | N=216 | competitor gap 7.9e-04 | kappa_n 21:-0.503 36:-0.526 54:-0.541 72:-0.551
+w07 y_marginal rho 0.750000 kappa     0 | N=216 | competitor gap 7.9e-04 | kappa_n 21:-0.022 36:-0.009 54:-0.004 72:-0.001
+w08 x_boundary rho 0.741565 kappa     0 | N=200 | competitor gap 1.2e-02 | kappa_n 20:+0.133 33:+0.094 50:+0.056 66:+0.034
+w08 y_boundary rho 0.684510 kappa     0 | N=200 | competitor gap 1.2e-02 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:+0.000
+w08 x_marginal rho 0.741565 kappa     0 | N=200 | competitor gap 1.2e-02 | kappa_n 20:+0.117 33:+0.084 50:+0.051 66:+0.031
+w08 y_marginal rho 0.684510 kappa     0 | N=200 | competitor gap 1.2e-02 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:-0.000
+w09 x_boundary rho 0.512821 kappa     0 | N=200 | competitor gap 1.4e-02 | kappa_n 20:+0.002 33:+0.002 50:+0.001 66:+0.001
+w09 y_boundary rho 0.476190 kappa     0 | N=200 | competitor gap 1.4e-02 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:-0.000
+w09 x_marginal rho 0.512821 kappa     0 | N=200 | competitor gap 1.4e-02 | kappa_n 20:+0.002 33:+0.002 50:+0.001 66:+0.001
+w09 y_marginal rho 0.476190 kappa     0 | N=200 | competitor gap 1.4e-02 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:+0.000
+w10 x_boundary rho 0.875000 kappa     0 | N=200 | competitor gap 7.7e-03 | kappa_n 20:-0.201 33:-0.165 50:-0.129 66:-0.104
+w10 y_boundary rho 0.800000 kappa  -1/2 | N=200 | competitor gap 7.7e-03 | kappa_n 20:-0.426 33:-0.449 50:-0.464 66:-0.472
+w10 x_marginal rho 0.875000 kappa     0 | N=200 | competitor gap 7.7e-03 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:-0.000
+w10 y_marginal rho 0.800000 kappa     0 | N=200 | competitor gap 7.7e-03 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:-0.000
+w11 x_boundary rho 0.245948 kappa     0 | N=200 | competitor gap 3.2e-05 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:+0.000
+w11 y_boundary rho 0.573642 kappa     0 | N=200 | competitor gap 3.2e-05 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:+0.000
+w11 x_marginal rho 0.245948 kappa     0 | N=200 | competitor gap 3.2e-05 | kappa_n 20:+0.000 33:-0.000 50:+0.000 66:-0.000
+w11 y_marginal rho 0.573642 kappa     0 | N=200 | competitor gap 3.2e-05 | kappa_n 20:-0.000 33:+0.000 50:+0.000 66:+0.000
+w12 x_boundary rho 0.833333 kappa     0 | N=200 | competitor gap 2.7e-04 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:-0.000
+w12 y_boundary rho 0.454421 kappa  -3/2 | N=200 | competitor gap 2.7e-04 | kappa_n 20:-0.346 33:-0.405 50:-0.455 66:-0.489
+w12 x_marginal rho 0.833333 kappa     0 | N=200 | competitor gap 2.7e-04 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:+0.000
+w12 y_marginal rho 0.454545 kappa     0 | N=200 | competitor gap 2.7e-04 | kappa_n 20:+0.000 33:+0.000 50:-0.000 66:-0.000
+w13 x_boundary rho 0.980000 kappa     0 | N=599 | competitor gap 3.4e-04 | kappa_n 59:+0.000 99:+0.000 149:+0.000 199:+0.000
+w13 y_boundary rho 0.960000 kappa     0 | N=599 | competitor gap 3.4e-04 | kappa_n 59:-0.000 99:-0.000 149:-0.000 199:-0.000
+w13 x_marginal rho 0.980000 kappa     0 | N=599 | competitor gap 3.4e-04 | kappa_n 59:-0.000 99:-0.000 149:-0.000 199:-0.000
+w13 y_marginal rho 0.960000 kappa     0 | N=599 | competitor gap 3.4e-04 | kappa_n 59:-0.000 99:-0.000 149:-0.000 199:-0.000
+w14 x_boundary rho 0.200000 kappa  -1/2 | N=200 | competitor gap 1.0e+00 | kappa_n 20:-0.455 33:-0.471 50:-0.481 66:-0.485
+w14 y_boundary rho 0.200000 kappa  -1/2 | N=200 | competitor gap 1.0e+00 | kappa_n 20:-0.455 33:-0.471 50:-0.481 66:-0.485
+w14 x_marginal rho 0.200000 kappa     0 | N=200 | competitor gap 1.0e+00 | kappa_n 20:-0.000 33:+0.000 50:+0.000 66:-0.000
+w14 y_marginal rho 0.200000 kappa     0 | N=200 | competitor gap 1.0e+00 | kappa_n 20:+0.000 33:-0.000 50:-0.000 66:-0.000
+w15 x_boundary rho 0.600000 kappa     0 | N=200 | competitor gap 2.3e-02 | kappa_n 20:+0.000 33:-0.000 50:+0.000 66:-0.000
+w15 y_boundary rho 0.700000 kappa     0 | N=200 | competitor gap 2.3e-02 | kappa_n 20:+0.000 33:+0.000 50:-0.000 66:+0.000
+w15 x_marginal rho 0.600000 kappa     0 | N=200 | competitor gap 2.3e-02 | kappa_n 20:+0.000 33:-0.000 50:+0.000 66:+0.000
+w15 y_marginal rho 0.700000 kappa     0 | N=200 | competitor gap 2.3e-02 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:+0.000
+w16 x_boundary rho 0.744681 kappa     0 | N=200 | competitor gap 2.3e-04 | kappa_n 20:-0.196 33:-0.154 50:-0.115 66:-0.090
+w16 y_boundary rho 0.839842 kappa     0 | N=200 | competitor gap 2.3e-04 | kappa_n 20:-0.398 33:-0.398 50:-0.391 66:-0.383
+w16 x_marginal rho 0.744681 kappa     1 | N=200 | competitor gap 2.3e-04 | kappa_n 20:+0.371 33:+0.457 50:+0.534 66:+0.587
+w16 y_marginal rho 0.839842 kappa     0 | N=200 | competitor gap 2.3e-04 | kappa_n 20:-0.149 33:-0.174 50:-0.194 66:-0.206
+w17 x_boundary rho 0.967742 kappa     0 | N=491 | competitor gap 6.2e-04 | kappa_n 49:-0.280 81:-0.268 122:-0.252 163:-0.236
+w17 y_boundary rho 0.975610 kappa     0 | N=491 | competitor gap 6.2e-04 | kappa_n 49:-0.230 81:-0.204 122:-0.176 163:-0.154
+w17 x_marginal rho 0.967742 kappa     0 | N=491 | competitor gap 6.2e-04 | kappa_n 49:-0.000 81:-0.000 122:+0.000 163:-0.000
+w17 y_marginal rho 0.975610 kappa     0 | N=491 | competitor gap 6.2e-04 | kappa_n 49:-0.000 81:+0.000 122:+0.000 163:+0.000
+w18 x_boundary rho 0.800000 kappa  -1/2 | N=200 | competitor gap 3.4e-01 | kappa_n 20:-0.299 33:-0.347 50:-0.381 66:-0.401
+w18 y_boundary rho 0.401584 kappa     0 | N=200 | competitor gap 3.4e-01 | kappa_n 20:-0.000 33:-0.000 50:+0.000 66:+0.000
+w18 x_marginal rho 0.800000 kappa  -1/2 | N=200 | competitor gap 3.4e-01 | kappa_n 20:-0.300 33:-0.347 50:-0.381 66:-0.401
+w18 y_marginal rho 0.401584 kappa     0 | N=200 | competitor gap 3.4e-01 | kappa_n 20:+0.011 33:+0.000 50:+0.000 66:+0.000
+w19 x_boundary rho 0.952381 kappa     1 | N=545 | competitor gap 1.2e-02 | kappa_n 54:+0.611 90:+0.705 136:+0.775 181:+0.818
+w19 y_boundary rho 0.977995 kappa     0 | N=545 | competitor gap 1.2e-02 | kappa_n 54:+0.000 90:+0.000 136:+0.000 181:+0.000
+w19 x_marginal rho 0.952381 kappa     1 | N=545 | competitor gap 1.2e-02 | kappa_n 54:+0.489 90:+0.605 136:+0.693 181:+0.748
+w19 y_marginal rho 0.977995 kappa     0 | N=545 | competitor gap 1.2e-02 | kappa_n 54:-0.000 90:+0.000 136:+0.000 181:+0.000
+w20 x_boundary rho 0.625000 kappa  -1/2 | N=200 | competitor gap 1.6e-02 | kappa_n 20:-0.437 33:-0.460 50:-0.473 66:-0.479
+w20 y_boundary rho 0.909091 kappa     0 | N=200 | competitor gap 1.6e-02 | kappa_n 20:-0.006 33:-0.001 50:-0.000 66:-0.000
+w20 x_marginal rho 0.625000 kappa  -1/2 | N=200 | competitor gap 1.6e-02 | kappa_n 20:-0.215 33:-0.258 50:-0.294 66:-0.318
+w20 y_marginal rho 0.909091 kappa     0 | N=200 | competitor gap 1.6e-02 | kappa_n 20:-0.005 33:-0.001 50:-0.000 66:-0.000
+w21 x_boundary rho 0.299805 kappa  -3/2 | N=200 | competitor gap 6.5e-04 | kappa_n 20:-0.469 33:-0.530 50:-0.579 66:-0.611
+w21 y_boundary rho 0.666667 kappa     0 | N=200 | competitor gap 6.5e-04 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:-0.000
+w21 x_marginal rho 0.300000 kappa     0 | N=200 | competitor gap 6.5e-04 | kappa_n 20:-0.000 33:+0.000 50:+0.000 66:+0.000
+w21 y_marginal rho 0.666667 kappa     0 | N=200 | competitor gap 6.5e-04 | kappa_n 20:-0.000 33:+0.000 50:+0.000 66:-0.000
+w22 x_boundary rho 0.400000 kappa  -1/2 | N=200 | competitor gap 1.8e-02 | kappa_n 20:-0.083 33:-0.102 50:-0.121 66:-0.136
+w22 y_boundary rho 0.625000 kappa     0 | N=200 | competitor gap 1.8e-02 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:+0.000
+w22 x_marginal rho 0.400000 kappa  -1/2 | N=200 | competitor gap 1.8e-02 | kappa_n 20:-0.077 33:-0.097 50:-0.117 66:-0.132
+w22 y_marginal rho 0.625000 kappa     0 | N=200 | competitor gap 1.8e-02 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:-0.000
+w23 x_boundary rho 0.187500 kappa     0 | N=200 | competitor gap 1.3e-01 | kappa_n 20:+0.000 33:+0.000 50:-0.000 66:-0.000
+w23 y_boundary rho 0.775289 kappa     0 | N=200 | competitor gap 1.3e-01 | kappa_n 20:-0.006 33:-0.001 50:-0.000 66:-0.000
+w23 x_marginal rho 0.187500 kappa     1 | N=200 | competitor gap 1.3e-01 | kappa_n 20:+0.614 33:+0.724 50:+0.799 66:+0.840
+w23 y_marginal rho 0.775289 kappa     0 | N=200 | competitor gap 1.3e-01 | kappa_n 20:-0.004 33:-0.001 50:-0.000 66:-0.000
+w24 x_boundary rho 0.377358 kappa     1 | N=200 | competitor gap 1.3e-01 | kappa_n 20:+0.871 33:+0.916 50:+0.943 66:+0.956
+w24 y_boundary rho 0.555556 kappa     0 | N=200 | competitor gap 1.3e-01 | kappa_n 20:-0.000 33:+0.000 50:-0.000 66:-0.000
+w24 x_marginal rho 0.377358 kappa     1 | N=200 | competitor gap 1.3e-01 | kappa_n 20:+0.829 33:+0.888 50:+0.923 66:+0.940
+w24 y_marginal rho 0.555556 kappa     0 | N=200 | competitor gap 1.3e-01 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:+0.000
+w25 x_boundary rho 0.666667 kappa  -1/2 | N=200 | competitor gap 1.4e-02 | kappa_n 20:-0.479 33:-0.487 50:-0.492 66:-0.494
+w25 y_boundary rho 0.438222 kappa  -3/2 | N=200 | competitor gap 1.4e-02 | kappa_n 20:-1.036 33:-1.151 50:-1.233 66:-1.280
+w25 x_marginal rho 0.666667 kappa  -1/2 | N=200 | competitor gap 1.4e-02 | kappa_n 20:-0.459 33:-0.474 50:-0.483 66:-0.487
+w25 y_marginal rho 0.444444 kappa     0 | N=200 | competitor gap 1.4e-02 | kappa_n 20:-0.082 33:-0.066 50:-0.049 66:-0.036
+w26 x_boundary rho 0.583349 kappa  -3/2 | N=200 | competitor gap 1.2e-02 | kappa_n 20:-1.173 33:-1.267 50:-1.329 66:-1.363
+w26 y_boundary rho 0.825837 kappa     0 | N=200 | competitor gap 1.2e-02 | kappa_n 20:-0.075 33:-0.037 50:-0.016 66:-0.008
+w26 x_marginal rho 0.645161 kappa     0 | N=200 | competitor gap 1.2e-02 | kappa_n 20:-0.005 33:-0.001 50:-0.000 66:-0.000
+w26 y_marginal rho 0.825837 kappa     0 | N=200 | competitor gap 1.2e-02 | kappa_n 20:-0.007 33:-0.004 50:-0.002 66:-0.001
+w27 x_boundary rho 0.416667 kappa     1 | N=200 | competitor gap 7.4e-02 | kappa_n 20:+0.741 33:+0.820 50:+0.872 66:+0.900
+w27 y_boundary rho 0.363636 kappa     0 | N=200 | competitor gap 7.4e-02 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:+0.000
+w27 x_marginal rho 0.416667 kappa     1 | N=200 | competitor gap 7.4e-02 | kappa_n 20:+0.762 33:+0.835 50:+0.883 66:+0.909
+w27 y_marginal rho 0.363636 kappa     0 | N=200 | competitor gap 7.4e-02 | kappa_n 20:+0.000 33:-0.000 50:-0.000 66:-0.000
+w28 x_boundary rho 0.343669 kappa  -3/2 | N=200 | competitor gap 2.4e-02 | kappa_n 20:-1.552 33:-1.606 50:-1.577 66:-1.556
+w28 y_boundary rho 0.899822 kappa     0 | N=200 | competitor gap 2.4e-02 | kappa_n 20:-0.115 33:-0.070 50:-0.039 66:-0.024
+w28 x_marginal rho 0.558769 kappa     0 | N=200 | competitor gap 2.4e-02 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:+0.000
+w28 y_marginal rho 0.899822 kappa     0 | N=200 | competitor gap 2.4e-02 | kappa_n 20:-0.083 33:-0.053 50:-0.031 66:-0.019
+w29 x_boundary rho 0.954654 kappa  -1/2 | N=380 | competitor gap 1.8e-04 | kappa_n 38:-0.517 63:-0.516 95:-0.513 126:-0.511
+w29 y_boundary rho 0.968473 kappa  -3/2 | N=380 | competitor gap 1.8e-04 | kappa_n 38:-0.690 63:-0.744 95:-0.793 126:-0.829
+w29 x_marginal rho 0.954826 kappa     0 | N=380 | competitor gap 1.8e-04 | kappa_n 38:+0.041 63:+0.052 95:+0.063 126:+0.071
+w29 y_marginal rho 0.968473 kappa  -3/2 | N=380 | competitor gap 1.8e-04 | kappa_n 38:-0.229 63:-0.286 95:-0.341 126:-0.384
+w30 x_boundary rho 0.333333 kappa  -1/2 | N=200 | competitor gap 7.2e-02 | kappa_n 20:-0.445 33:-0.465 50:-0.476 66:-0.482
+w30 y_boundary rho 0.428571 kappa     0 | N=200 | competitor gap 7.2e-02 | kappa_n 20:-0.023 33:-0.008 50:-0.002 66:-0.001
+w30 x_marginal rho 0.333333 kappa     0 | N=200 | competitor gap 7.2e-02 | kappa_n 20:+0.000 33:+0.000 50:+0.000 66:+0.000
+w30 y_marginal rho 0.428571 kappa     0 | N=200 | competitor gap 7.2e-02 | kappa_n 20:-0.000 33:-0.000 50:-0.000 66:-0.000
+w31 x_boundary rho 0.980000 kappa     0 | N=599 | competitor gap 3.3e-03 | kappa_n 59:+0.000 99:+0.000 149:+0.000 199:+0.000
+w31 y_boundary rho 0.960000 kappa     0 | N=599 | competitor gap 3.3e-03 | kappa_n 59:-0.000 99:-0.000 149:-0.000 199:-0.000
+w31 x_marginal rho 0.980000 kappa     0 | N=599 | competitor gap 3.3e-03 | kappa_n 59:+0.000 99:-0.000 149:+0.000 199:-0.000
+w31 y_marginal rho 0.960000 kappa     0 | N=599 | competitor gap 3.3e-03 | kappa_n 59:-0.000 99:-0.000 149:-0.000 199:-0.001
