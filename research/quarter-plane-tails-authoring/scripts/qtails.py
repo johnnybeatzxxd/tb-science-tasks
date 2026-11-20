@@ -222,9 +222,14 @@ def marginal(s, bx):
     if xKm > xs + TIGHT * xs:
         return xs, kq                       # beyond the boundary singularity
     if yo == 1:
-        # (xK, 1) is the rightmost point of the kernel curve (xK = x3)
+        # (xK, 1) is the rightmost point of the kernel curve (xK = x3).  With s = sqrt(x3 - x),
+        # the boundary function behaves like s^e (e = 1, -1, -2 for kappa = -3/2, -1/2, 0); the
+        # numerator of Q(x,1) is O(s^(1+min(e,0))) and K(x,1) = O(s^2), so the marginal behaves
+        # like s^(-1+min(e,0)).
         if abs(xKm - xs) < TIGHT * xs:
-            return xs, Fraction(-1, 2)
+            e = -2 * (kq + 1)
+            f = -1 + min(e, 0)
+            return xs, Fraction(-f, 2) - 1
         return xs, kq
     if yo < 1:
         # (xK, 1) on the upper branch: genuine pole of the marginal

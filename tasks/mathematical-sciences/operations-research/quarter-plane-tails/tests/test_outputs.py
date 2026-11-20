@@ -43,6 +43,11 @@ def run_program():
     except subprocess.TimeoutExpired:
         status = ("timeout", None, "", "")
     elapsed = time.time() - t0
+    if out.exists():
+        try:  # keep the program output with the verifier logs (intermediates for audits)
+            shutil.copy(out, "/logs/verifier/program_output.json")
+        except OSError:
+            pass
     data = None
     if status[0] == "ok" and out.exists():
         try:

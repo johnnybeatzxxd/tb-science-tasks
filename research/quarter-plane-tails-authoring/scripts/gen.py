@@ -38,12 +38,13 @@ def finish(I, X, Y, O):
     return s
 
 
-def make(kind, rng, lo=1.05, hi=3.0, den=20, axis_den=60):
+def make(kind, rng, lo=1.05, hi=3.0, den=20, axis_den=60, ylo=0.5, yhi=None):
+    yhi = hi if yhi is None else yhi
     """returns a walk spec with a planted event on the x-side (or None)."""
     O = rand_law(ORI, rng, zero=0.1)
     if kind == 'own_branch':
-        x3, y3 = rnum(rng, lo, hi, den), rnum(rng, 0.5, hi, den)
-        I = solve_law(INT, [(coef_phi(INT, x3, y3), F(1)), (coef_Ky(INT, x3, y3), F(x3))], rng)
+        x3, y3 = rnum(rng, lo, hi, den), rnum(rng, ylo, yhi, den)
+        I = solve_law(INT, [(coef_phi(INT, x3, y3), F(1)), (coef_Ky(INT, x3, y3), F(x3))], rng, tries=300)
         if I is None: return None
         X = solve_law(XAX, [(coef_phi(XAX, x3, y3), F(1))], rng, den=axis_den)
         Y = rand_law(YAX, rng)
@@ -64,8 +65,8 @@ def make(kind, rng, lo=1.05, hi=3.0, den=20, axis_den=60):
         Y = solve_law(YAX, [(coef_phi(YAX, xo, y3), F(1))], rng, den=axis_den)
         X = solve_law(XAX, [(coef_phi(XAX, x3, y3), F(1))], rng, den=axis_den)
     elif kind == 'double_pole':
-        xs, ys = rnum(rng, lo, hi, den), rnum(rng, lo, hi, den)
-        I = solve_law(INT, [(coef_phi(INT, xs, ys), F(1))], rng)
+        xs, ys = rnum(rng, lo, hi, den), rnum(rng, max(lo, ylo), yhi, den)
+        I = solve_law(INT, [(coef_phi(INT, xs, ys), F(1))], rng, tries=300)
         if I is None: return None
         xo = other_x_root(I, xs, ys)
         if not (0 < xo < xs): return None

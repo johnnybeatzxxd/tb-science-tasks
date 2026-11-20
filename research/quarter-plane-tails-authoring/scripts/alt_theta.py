@@ -86,8 +86,12 @@ class Side:
     def gamma1(self, t1, t2):
         return sum(v * mp.e ** (a * t1 + b * t2) for (a, b), v in self.q.items()) - 1
 
-    def roots_on_low_arc(self, f, tR, ngrid=4000):
-        """roots of f(t1) on (0, tR] (sign changes, tangencies and the endpoint)."""
+    def t2_at_rightmost(self, tR):
+        A, B, C = self.abc(tR)
+        return mp.log(C / A) / 2
+
+    def roots_on_low_arc(self, f, tR, ngrid=4000, f_end=None):
+        """roots of f(t1) on (0, tR] (sign changes, tangencies and the endpoint value f_end)."""
         pts = [tR * k / ngrid for k in range(1, ngrid + 1)]
         vals = [f(t) for t in pts]
         roots = []
@@ -97,7 +101,7 @@ class Side:
                 roots.append((pts[k], 1))
             elif vals[k] * vals[k + 1] < 0:
                 roots.append((mp.findroot(f, (pts[k], pts[k + 1]), solver='anderson'), 1))
-        if abs(vals[-1]) < EPS:
+        if f_end is not None and abs(f_end) < EPS:
             roots.append((tR, 1))
         # tangencies: local minima of |f| without a sign change
         for k in range(1, len(pts) - 1):
@@ -126,12 +130,13 @@ class Side:
             raise ValueError('unbounded level curve')
         f = lambda t: self.gamma1(t, self.t2_low_high(t)[0])
         cands = []
-        for t, m in self.roots_on_low_arc(f, tR):
+        t2R = self.t2_at_rightmost(tR)
+        for t, m in self.roots_on_low_arc(f, tR, f_end=self.gamma1(tR, t2R)):
             cands += [t] * m
         if other is not None and other[1]:
             lr = mp.log(other[0])
             g = lambda t: self.t2_low_high(t)[0] - lr
-            hits = [t for t, m in self.roots_on_low_arc(g, tR)]
+            hits = [t for t, m in self.roots_on_low_arc(g, tR, f_end=t2R - lr)]
             if hits:
                 cands.append(hits[0])
         ts = min([tR] + cands)
@@ -155,7 +160,12 @@ class Side:
             return xs, kq
         lo, hi = self.t2_low_high(tK)
         if abs(lo) < mp.mpf(10) ** -20 and abs(hi) < mp.mpf(10) ** -20:
-            return (xs, Fraction(-1, 2)) if abs(tK - sing['tR']) < mp.mpf(10) ** -20 else (xs, kq)
+            # (tK, 0) is the rightmost point; local exponent of the boundary function in
+            # s = sqrt(x3 - x) is e, the marginal gets s^(-1 + min(e, 0))
+            if abs(tK - sing['tR']) < mp.mpf(10) ** -20:
+                e = {Fraction(-3, 2): 1, Fraction(-1, 2): -1, Fraction(0): -2}[kq]
+                return xs, Fraction(1 - min(e, 0), 2) - 1
+            return xs, kq
         if abs(hi) < mp.mpf(10) ** -20:      # (tK, 0) on the upper arc: genuine pole
             if mp.e ** tK < xs * (1 - mp.mpf(10) ** -20):
                 return mp.e ** tK, Fraction(0)
