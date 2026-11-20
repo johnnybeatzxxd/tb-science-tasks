@@ -1,0 +1,1 @@
+{"run": "symlink_probe", "submission": "probe_symlink", "reward": 0, "date_utc": "2026-11-20T21:20:35Z", "wall_seconds": 2, "intermediates_sha256": "38f97d0ccbf5be26217bb63d3bd010258bcd2af00ca7afbcf5dc493c8b4cbf2e", "verifier": "tests/Dockerfile image, docker --network none --cpus 4 -m 8g, tests/test.sh"}

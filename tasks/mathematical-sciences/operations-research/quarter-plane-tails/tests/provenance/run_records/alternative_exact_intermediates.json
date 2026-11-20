@@ -1,0 +1,1093 @@
+{
+ "problems": [],
+ "returncode": 0,
+ "status": "finished",
+ "structure": [],
+ "walks": {
+  "w01": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.589821136708745998758092415569",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.589821136708745998758092415569",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.831196314138726920204635836391",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.831196314138726920204635836391",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w02": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.465116279069767441860465116279",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.465116279069767441860465116279",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.689035592096751907327885978329",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.689035592096751907327885978329",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w03": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.800000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.800000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.562217363049917377794655243633",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.562500000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w04": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.444444444444444444444444444444",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.444444444444444444444444444444",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.666666666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.666666666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w05": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.588235294117647058823529411765",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.588235294117647058823529411765",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.770905652311033439466454823291",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.770905652311033439466454823291",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w06": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.455339940948951275593987916488",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.455339940948951275593987916488",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.303154497863527612649466632463",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.303154497863527612649466632463",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w07": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.944505905234055353533230142390",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.944505905234055353533230142390",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.715040743539010534597655117628",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.750000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w08": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.741564535277700012290185790317",
+     "rho_ok": true,
+     "rho_rel_error": "1.349e-30"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.741564535277700012290185790317",
+     "rho_ok": true,
+     "rho_rel_error": "1.349e-30"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.684509979557833521663401929498",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.684509979557833521663401929498",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w09": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.512820512820512820512820512821",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.512820512820512820512820512821",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.476190476190476190476190476190",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.476190476190476190476190476190",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w10": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.875000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.875000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.800000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.800000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w11": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.245948325078889254253174018897",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.245948325078889254253174018897",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.573642106033054550803771448033",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.573642106033054550803771448033",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w12": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.833333333333333333333333333333",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.833333333333333333333333333333",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.454420570455352996007495328166",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.454545454545454545454545454545",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w13": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.980000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.980000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.960000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.960000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w14": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.200000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.200000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.200000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.200000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w15": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.600000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.600000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.700000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.700000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w16": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.744680851063829787234042553191",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.744680851063829787234042553191",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.839841884497419401288249690159",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.839841884497419401288249690159",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w17": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.967741935483870967741935483871",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.967741935483870967741935483871",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.975609756097560975609756097561",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.975609756097560975609756097561",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w18": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.800000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.800000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.401583634433283624521772621255",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.401583634433283624521772621255",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w19": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.952380952380952380952380952381",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.952380952380952380952380952381",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.977995110024449877750611246944",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.977995110024449877750611246944",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w20": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.625000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.625000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.909090909090909090909090909091",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.909090909090909090909090909091",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w21": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.299804605428093774865334470453",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.300000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.666666666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.666666666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w22": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.400000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.400000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.625000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.625000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w23": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.187500000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.187500000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.775288724237237954067247964803",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.775288724237237954067247964803",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w24": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.377358490566037735849056603774",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.377358490566037735849056603774",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.555555555555555555555555555556",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.555555555555555555555555555556",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w25": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.666666666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.666666666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.438221569338283671783682663007",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.444444444444444444444444444444",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w26": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.583348755247390547426442691801",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.645161290322580645161290322581",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.825837436796618481857461973741",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.825837436796618481857461973741",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w27": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.416666666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.416666666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.363636363636363636363636363636",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.363636363636363636363636363636",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w28": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.343668715734045054782239654218",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.558768656716417910447761194030",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.899821631024405583419713334872",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.899821631024405583419713334872",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w29": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.954653937947494033412887828162",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.954826058518188015528524789813",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.968473480799507197690213645315",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.968473480799507197690213645315",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w30": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.333333333333333333333333333333",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.333333333333333333333333333333",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.428571428571428571428571428571",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.428571428571428571428571428571",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w31": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.980000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.980000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.960000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.960000000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  }
+ }
+}

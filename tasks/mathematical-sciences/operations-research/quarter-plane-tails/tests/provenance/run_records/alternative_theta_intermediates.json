@@ -1,0 +1,1093 @@
+{
+ "problems": [],
+ "returncode": 0,
+ "status": "finished",
+ "structure": [],
+ "walks": {
+  "w01": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.5898211367087459987580924",
+     "rho_ok": true,
+     "rho_rel_error": "2.640e-26"
+    },
+    "x_marginal": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.5898211367087459987580924",
+     "rho_ok": true,
+     "rho_rel_error": "2.640e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8311963141387269202046358",
+     "rho_ok": true,
+     "rho_rel_error": "4.378e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8311963141387269202046358",
+     "rho_ok": true,
+     "rho_rel_error": "4.378e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w02": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.4651162790697674418604651",
+     "rho_ok": true,
+     "rho_rel_error": "3.500e-26"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.4651162790697674418604651",
+     "rho_ok": true,
+     "rho_rel_error": "3.500e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6890355920967519073278860",
+     "rho_ok": true,
+     "rho_rel_error": "3.145e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6890355920967519073278860",
+     "rho_ok": true,
+     "rho_rel_error": "3.145e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w03": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.8000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.8000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.5622173630499173777946552",
+     "rho_ok": true,
+     "rho_rel_error": "7.761e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.5625000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w04": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4444444444444444444444444",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-25"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4444444444444444444444444",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-25"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w05": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.5882352941176470588235294",
+     "rho_ok": true,
+     "rho_rel_error": "2.000e-26"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.5882352941176470588235294",
+     "rho_ok": true,
+     "rho_rel_error": "2.000e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7709056523110334394664548",
+     "rho_ok": true,
+     "rho_rel_error": "3.021e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7709056523110334394664548",
+     "rho_ok": true,
+     "rho_rel_error": "3.021e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w06": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.4553399409489512755939879",
+     "rho_ok": true,
+     "rho_rel_error": "3.621e-26"
+    },
+    "x_marginal": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.4553399409489512755939879",
+     "rho_ok": true,
+     "rho_rel_error": "3.621e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.3031544978635276126494666",
+     "rho_ok": true,
+     "rho_rel_error": "1.071e-25"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.3031544978635276126494666",
+     "rho_ok": true,
+     "rho_rel_error": "1.071e-25"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w07": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.9445059052340553535332301",
+     "rho_ok": true,
+     "rho_rel_error": "4.488e-26"
+    },
+    "x_marginal": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.9445059052340553535332301",
+     "rho_ok": true,
+     "rho_rel_error": "4.488e-26"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.7150407435390105345976551",
+     "rho_ok": true,
+     "rho_rel_error": "2.465e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7500000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w08": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7415645352777000122901858",
+     "rho_ok": true,
+     "rho_rel_error": "1.306e-26"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7415645352777000122901858",
+     "rho_ok": true,
+     "rho_rel_error": "1.306e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6845099795578335216634019",
+     "rho_ok": true,
+     "rho_rel_error": "4.309e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6845099795578335216634019",
+     "rho_ok": true,
+     "rho_rel_error": "4.309e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w09": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.5128205128205128205128205",
+     "rho_ok": true,
+     "rho_rel_error": "2.500e-26"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.5128205128205128205128205",
+     "rho_ok": true,
+     "rho_rel_error": "2.500e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4761904761904761904761905",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4761904761904761904761905",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w10": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8750000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8750000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.8000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w11": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.2459483250788892542531740",
+     "rho_ok": true,
+     "rho_rel_error": "7.683e-26"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.2459483250788892542531740",
+     "rho_ok": true,
+     "rho_rel_error": "7.683e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.5736421060330545508037714",
+     "rho_ok": true,
+     "rho_rel_error": "8.373e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.5736421060330545508037714",
+     "rho_ok": true,
+     "rho_rel_error": "8.373e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w12": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8333333333333333333333333",
+     "rho_ok": true,
+     "rho_rel_error": "4.000e-26"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8333333333333333333333333",
+     "rho_ok": true,
+     "rho_rel_error": "4.000e-26"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.4544205704553529960074953",
+     "rho_ok": true,
+     "rho_rel_error": "6.198e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4545454545454545454545455",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-25"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w13": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9800000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9800000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9600000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9600000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w14": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.2000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.2000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.2000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.2000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w15": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w16": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7446808510638297872340426",
+     "rho_ok": true,
+     "rho_rel_error": "6.286e-26"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.7446808510638297872340426",
+     "rho_ok": true,
+     "rho_rel_error": "6.286e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8398418844974194012882497",
+     "rho_ok": true,
+     "rho_rel_error": "1.172e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8398418844974194012882497",
+     "rho_ok": true,
+     "rho_rel_error": "1.172e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w17": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9677419354838709677419355",
+     "rho_ok": true,
+     "rho_rel_error": "1.667e-26"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9677419354838709677419355",
+     "rho_ok": true,
+     "rho_rel_error": "1.667e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9756097560975609756097561",
+     "rho_ok": true,
+     "rho_rel_error": "2.500e-27"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9756097560975609756097561",
+     "rho_ok": true,
+     "rho_rel_error": "2.500e-27"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w18": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.8000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.8000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4015836344332836245217726",
+     "rho_ok": true,
+     "rho_rel_error": "5.293e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4015836344332836245217726",
+     "rho_ok": true,
+     "rho_rel_error": "5.293e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w19": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.9523809523809523809523810",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.9523809523809523809523810",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9779951100244498777506112",
+     "rho_ok": true,
+     "rho_rel_error": "4.800e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9779951100244498777506112",
+     "rho_ok": true,
+     "rho_rel_error": "4.800e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w20": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.6250000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.6250000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9090909090909090909090909",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9090909090909090909090909",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w21": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.2998046054280937748653345",
+     "rho_ok": true,
+     "rho_rel_error": "9.855e-26"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.3000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w22": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.4000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.4000000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6250000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6250000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w23": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.1875000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.1875000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7752887242372379540672480",
+     "rho_ok": true,
+     "rho_rel_error": "4.540e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.7752887242372379540672480",
+     "rho_ok": true,
+     "rho_rel_error": "4.540e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w24": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.3773584905660377358490566",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-26"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.3773584905660377358490566",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.5555555555555555555555556",
+     "rho_ok": true,
+     "rho_rel_error": "8.000e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.5555555555555555555555556",
+     "rho_ok": true,
+     "rho_rel_error": "8.000e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w25": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.6666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    },
+    "x_marginal": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.6666666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "5.000e-26"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.4382215693382836717836827",
+     "rho_ok": true,
+     "rho_rel_error": "8.442e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4444444444444444444444444",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-25"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w26": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.5833487552473905474264427",
+     "rho_ok": true,
+     "rho_rel_error": "1.406e-26"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.6451612903225806451612903",
+     "rho_ok": true,
+     "rho_rel_error": "3.500e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8258374367966184818574620",
+     "rho_ok": true,
+     "rho_rel_error": "3.180e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8258374367966184818574620",
+     "rho_ok": true,
+     "rho_rel_error": "3.180e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w27": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.4166666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "8.000e-26"
+    },
+    "x_marginal": {
+     "kappa": "1",
+     "kappa_ok": true,
+     "rho": "0.4166666666666666666666667",
+     "rho_ok": true,
+     "rho_rel_error": "8.000e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.3636363636363636363636364",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-25"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.3636363636363636363636364",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-25"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w28": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.3436687157340450547822397",
+     "rho_ok": true,
+     "rho_rel_error": "1.332e-25"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.5587686567164179104477612",
+     "rho_ok": true,
+     "rho_rel_error": "1.068e-26"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8998216310244055834197133",
+     "rho_ok": true,
+     "rho_rel_error": "3.875e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.8998216310244055834197133",
+     "rho_ok": true,
+     "rho_rel_error": "3.875e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w29": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.9546539379474940334128878",
+     "rho_ok": true,
+     "rho_rel_error": "2.950e-26"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9548260585181880155285248",
+     "rho_ok": true,
+     "rho_rel_error": "1.067e-26"
+    },
+    "y_boundary": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.9684734807995071976902136",
+     "rho_ok": true,
+     "rho_rel_error": "4.679e-26"
+    },
+    "y_marginal": {
+     "kappa": "-3/2",
+     "kappa_ok": true,
+     "rho": "0.9684734807995071976902136",
+     "rho_ok": true,
+     "rho_rel_error": "4.679e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w30": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "-1/2",
+     "kappa_ok": true,
+     "rho": "0.3333333333333333333333333",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-25"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.3333333333333333333333333",
+     "rho_ok": true,
+     "rho_rel_error": "1.000e-25"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4285714285714285714285714",
+     "rho_ok": true,
+     "rho_rel_error": "6.667e-26"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.4285714285714285714285714",
+     "rho_ok": true,
+     "rho_rel_error": "6.667e-26"
+    }
+   },
+   "ok": true,
+   "problems": []
+  },
+  "w31": {
+   "fields": {
+    "present": true,
+    "x_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9800000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "x_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9800000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_boundary": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9600000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    },
+    "y_marginal": {
+     "kappa": "0",
+     "kappa_ok": true,
+     "rho": "0.9600000000000000000000000",
+     "rho_ok": true,
+     "rho_rel_error": "0.000e+00"
+    }
+   },
+   "ok": true,
+   "problems": []
+  }
+ }
+}

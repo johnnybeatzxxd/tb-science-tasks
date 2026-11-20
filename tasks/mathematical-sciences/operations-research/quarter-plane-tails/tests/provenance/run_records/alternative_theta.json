@@ -1,0 +1,1 @@
+{"run": "alternative_theta", "submission": "alt_theta", "reward": 1, "date_utc": "2026-11-20T21:20:21Z", "wall_seconds": 106, "intermediates_sha256": "60d359b87d58b49e17e665b4e2831b8133f4851fea347718a781b76467f64842", "verifier": "tests/Dockerfile image, docker --network none --cpus 4 -m 8g, tests/test.sh"}

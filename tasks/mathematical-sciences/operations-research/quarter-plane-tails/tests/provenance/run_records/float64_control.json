@@ -1,0 +1,1 @@
+{"run": "float64_control", "submission": "b_float64", "reward": 1, "date_utc": "2026-11-20T21:20:33Z", "wall_seconds": 3, "intermediates_sha256": "f5551cd68e87114a5060ad4a60fc258d80fd710798204c8629422950dbeddc5b", "verifier": "tests/Dockerfile image, docker --network none --cpus 4 -m 8g, tests/test.sh"}

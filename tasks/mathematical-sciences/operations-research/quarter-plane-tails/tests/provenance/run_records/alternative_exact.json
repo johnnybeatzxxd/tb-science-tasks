@@ -1,0 +1,1 @@
+{"run": "alternative_exact", "submission": "alt_exact", "reward": 1, "date_utc": "2026-11-20T21:20:30Z", "wall_seconds": 9, "intermediates_sha256": "390d8f860c6fe40f73b293d1c87d1d4eb48fbfa11f331fdfa25bf166b2e605f3", "verifier": "tests/Dockerfile image, docker --network none --cpus 4 -m 8g, tests/test.sh"}

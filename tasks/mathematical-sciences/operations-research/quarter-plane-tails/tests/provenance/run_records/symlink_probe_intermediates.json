@@ -1,0 +1,290 @@
+{
+ "problems": [
+  "symbolic link in the submission: /root/qtails/tails.py",
+  "/root/qtails/tails.py is not a regular file"
+ ],
+ "returncode": null,
+ "status": "invalid submission",
+ "structure": null,
+ "walks": {
+  "w01": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w01 missing from the output"
+   ]
+  },
+  "w02": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w02 missing from the output"
+   ]
+  },
+  "w03": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w03 missing from the output"
+   ]
+  },
+  "w04": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w04 missing from the output"
+   ]
+  },
+  "w05": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w05 missing from the output"
+   ]
+  },
+  "w06": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w06 missing from the output"
+   ]
+  },
+  "w07": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w07 missing from the output"
+   ]
+  },
+  "w08": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w08 missing from the output"
+   ]
+  },
+  "w09": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w09 missing from the output"
+   ]
+  },
+  "w10": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w10 missing from the output"
+   ]
+  },
+  "w11": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w11 missing from the output"
+   ]
+  },
+  "w12": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w12 missing from the output"
+   ]
+  },
+  "w13": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w13 missing from the output"
+   ]
+  },
+  "w14": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w14 missing from the output"
+   ]
+  },
+  "w15": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w15 missing from the output"
+   ]
+  },
+  "w16": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w16 missing from the output"
+   ]
+  },
+  "w17": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w17 missing from the output"
+   ]
+  },
+  "w18": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w18 missing from the output"
+   ]
+  },
+  "w19": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w19 missing from the output"
+   ]
+  },
+  "w20": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w20 missing from the output"
+   ]
+  },
+  "w21": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w21 missing from the output"
+   ]
+  },
+  "w22": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w22 missing from the output"
+   ]
+  },
+  "w23": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w23 missing from the output"
+   ]
+  },
+  "w24": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w24 missing from the output"
+   ]
+  },
+  "w25": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w25 missing from the output"
+   ]
+  },
+  "w26": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w26 missing from the output"
+   ]
+  },
+  "w27": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w27 missing from the output"
+   ]
+  },
+  "w28": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w28 missing from the output"
+   ]
+  },
+  "w29": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w29 missing from the output"
+   ]
+  },
+  "w30": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w30 missing from the output"
+   ]
+  },
+  "w31": {
+   "fields": {
+    "present": false
+   },
+   "ok": false,
+   "problems": [
+    "walk w31 missing from the output"
+   ]
+  }
+ }
+}

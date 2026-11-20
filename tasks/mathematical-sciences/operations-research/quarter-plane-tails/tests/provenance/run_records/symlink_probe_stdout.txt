@@ -1,0 +1,396 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.7, pytest-8.4.1, pluggy-1.7.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 32 items
+
+../tests/test_outputs.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_contract _________________________________
+
+    def test_contract():
+        """The submission is a symlink-free directory with a regular tails.py; the program finishes
+        within 1800 s with exit status 0 and writes a regular, strict-JSON output file whose keys are
+        exactly the input walk ids."""
+        res = run_program()
+>       assert not res["problems"], "submission/output: " + "; ".join(res["problems"])
+E       AssertionError: submission/output: symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file
+E       assert not ['symbolic link in the submission: /root/qtails/tails.py', '/root/qtails/tails.py is not a regular file']
+
+/tests/test_outputs.py:198: AssertionError
+___________________________________ test_w01 ___________________________________
+
+    def test_w01():
+        """Walk w01: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w01")
+>       assert ok, "walk w01: " + "; ".join(probs)
+E       AssertionError: walk w01: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:212: AssertionError
+___________________________________ test_w02 ___________________________________
+
+    def test_w02():
+        """Walk w02: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w02")
+>       assert ok, "walk w02: " + "; ".join(probs)
+E       AssertionError: walk w02: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:219: AssertionError
+___________________________________ test_w03 ___________________________________
+
+    def test_w03():
+        """Walk w03: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w03")
+>       assert ok, "walk w03: " + "; ".join(probs)
+E       AssertionError: walk w03: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:226: AssertionError
+___________________________________ test_w04 ___________________________________
+
+    def test_w04():
+        """Walk w04: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w04")
+>       assert ok, "walk w04: " + "; ".join(probs)
+E       AssertionError: walk w04: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:233: AssertionError
+___________________________________ test_w05 ___________________________________
+
+    def test_w05():
+        """Walk w05: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w05")
+>       assert ok, "walk w05: " + "; ".join(probs)
+E       AssertionError: walk w05: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:240: AssertionError
+___________________________________ test_w06 ___________________________________
+
+    def test_w06():
+        """Walk w06: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w06")
+>       assert ok, "walk w06: " + "; ".join(probs)
+E       AssertionError: walk w06: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:247: AssertionError
+___________________________________ test_w07 ___________________________________
+
+    def test_w07():
+        """Walk w07: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w07")
+>       assert ok, "walk w07: " + "; ".join(probs)
+E       AssertionError: walk w07: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:254: AssertionError
+___________________________________ test_w08 ___________________________________
+
+    def test_w08():
+        """Walk w08: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w08")
+>       assert ok, "walk w08: " + "; ".join(probs)
+E       AssertionError: walk w08: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:261: AssertionError
+___________________________________ test_w09 ___________________________________
+
+    def test_w09():
+        """Walk w09: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w09")
+>       assert ok, "walk w09: " + "; ".join(probs)
+E       AssertionError: walk w09: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:268: AssertionError
+___________________________________ test_w10 ___________________________________
+
+    def test_w10():
+        """Walk w10: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w10")
+>       assert ok, "walk w10: " + "; ".join(probs)
+E       AssertionError: walk w10: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:275: AssertionError
+___________________________________ test_w11 ___________________________________
+
+    def test_w11():
+        """Walk w11: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w11")
+>       assert ok, "walk w11: " + "; ".join(probs)
+E       AssertionError: walk w11: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:282: AssertionError
+___________________________________ test_w12 ___________________________________
+
+    def test_w12():
+        """Walk w12: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w12")
+>       assert ok, "walk w12: " + "; ".join(probs)
+E       AssertionError: walk w12: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:289: AssertionError
+___________________________________ test_w13 ___________________________________
+
+    def test_w13():
+        """Walk w13: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w13")
+>       assert ok, "walk w13: " + "; ".join(probs)
+E       AssertionError: walk w13: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:296: AssertionError
+___________________________________ test_w14 ___________________________________
+
+    def test_w14():
+        """Walk w14: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w14")
+>       assert ok, "walk w14: " + "; ".join(probs)
+E       AssertionError: walk w14: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:303: AssertionError
+___________________________________ test_w15 ___________________________________
+
+    def test_w15():
+        """Walk w15: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w15")
+>       assert ok, "walk w15: " + "; ".join(probs)
+E       AssertionError: walk w15: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:310: AssertionError
+___________________________________ test_w16 ___________________________________
+
+    def test_w16():
+        """Walk w16: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w16")
+>       assert ok, "walk w16: " + "; ".join(probs)
+E       AssertionError: walk w16: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:317: AssertionError
+___________________________________ test_w17 ___________________________________
+
+    def test_w17():
+        """Walk w17: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w17")
+>       assert ok, "walk w17: " + "; ".join(probs)
+E       AssertionError: walk w17: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:324: AssertionError
+___________________________________ test_w18 ___________________________________
+
+    def test_w18():
+        """Walk w18: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w18")
+>       assert ok, "walk w18: " + "; ".join(probs)
+E       AssertionError: walk w18: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:331: AssertionError
+___________________________________ test_w19 ___________________________________
+
+    def test_w19():
+        """Walk w19: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w19")
+>       assert ok, "walk w19: " + "; ".join(probs)
+E       AssertionError: walk w19: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:338: AssertionError
+___________________________________ test_w20 ___________________________________
+
+    def test_w20():
+        """Walk w20: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w20")
+>       assert ok, "walk w20: " + "; ".join(probs)
+E       AssertionError: walk w20: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:345: AssertionError
+___________________________________ test_w21 ___________________________________
+
+    def test_w21():
+        """Walk w21: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w21")
+>       assert ok, "walk w21: " + "; ".join(probs)
+E       AssertionError: walk w21: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:352: AssertionError
+___________________________________ test_w22 ___________________________________
+
+    def test_w22():
+        """Walk w22: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w22")
+>       assert ok, "walk w22: " + "; ".join(probs)
+E       AssertionError: walk w22: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:359: AssertionError
+___________________________________ test_w23 ___________________________________
+
+    def test_w23():
+        """Walk w23: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w23")
+>       assert ok, "walk w23: " + "; ".join(probs)
+E       AssertionError: walk w23: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:366: AssertionError
+___________________________________ test_w24 ___________________________________
+
+    def test_w24():
+        """Walk w24: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w24")
+>       assert ok, "walk w24: " + "; ".join(probs)
+E       AssertionError: walk w24: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:373: AssertionError
+___________________________________ test_w25 ___________________________________
+
+    def test_w25():
+        """Walk w25: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w25")
+>       assert ok, "walk w25: " + "; ".join(probs)
+E       AssertionError: walk w25: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:380: AssertionError
+___________________________________ test_w26 ___________________________________
+
+    def test_w26():
+        """Walk w26: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w26")
+>       assert ok, "walk w26: " + "; ".join(probs)
+E       AssertionError: walk w26: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:387: AssertionError
+___________________________________ test_w27 ___________________________________
+
+    def test_w27():
+        """Walk w27: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w27")
+>       assert ok, "walk w27: " + "; ".join(probs)
+E       AssertionError: walk w27: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:394: AssertionError
+___________________________________ test_w28 ___________________________________
+
+    def test_w28():
+        """Walk w28: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w28")
+>       assert ok, "walk w28: " + "; ".join(probs)
+E       AssertionError: walk w28: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:401: AssertionError
+___________________________________ test_w29 ___________________________________
+
+    def test_w29():
+        """Walk w29: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w29")
+>       assert ok, "walk w29: " + "; ".join(probs)
+E       AssertionError: walk w29: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:408: AssertionError
+___________________________________ test_w30 ___________________________________
+
+    def test_w30():
+        """Walk w30: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w30")
+>       assert ok, "walk w30: " + "; ".join(probs)
+E       AssertionError: walk w30: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:415: AssertionError
+___________________________________ test_w31 ___________________________________
+
+    def test_w31():
+        """Walk w31: for all four sequences, kappa equals the exact value and rho is within
+        relative error 1e-9 of the exact value, with both fields well formed."""
+        ok, probs = walk_verdict("w31")
+>       assert ok, "walk w31: " + "; ".join(probs)
+E       AssertionError: walk w31: no usable output (symbolic link in the submission: /root/qtails/tails.py; /root/qtails/tails.py is not a regular file)
+E       assert False
+
+/tests/test_outputs.py:422: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_contract - AssertionError: submission/o...
+FAILED ../tests/test_outputs.py::test_w01 - AssertionError: walk w01: no usab...
+FAILED ../tests/test_outputs.py::test_w02 - AssertionError: walk w02: no usab...
+FAILED ../tests/test_outputs.py::test_w03 - AssertionError: walk w03: no usab...
+FAILED ../tests/test_outputs.py::test_w04 - AssertionError: walk w04: no usab...
+FAILED ../tests/test_outputs.py::test_w05 - AssertionError: walk w05: no usab...
+FAILED ../tests/test_outputs.py::test_w06 - AssertionError: walk w06: no usab...
+FAILED ../tests/test_outputs.py::test_w07 - AssertionError: walk w07: no usab...
+FAILED ../tests/test_outputs.py::test_w08 - AssertionError: walk w08: no usab...
+FAILED ../tests/test_outputs.py::test_w09 - AssertionError: walk w09: no usab...
+FAILED ../tests/test_outputs.py::test_w10 - AssertionError: walk w10: no usab...
+FAILED ../tests/test_outputs.py::test_w11 - AssertionError: walk w11: no usab...
+FAILED ../tests/test_outputs.py::test_w12 - AssertionError: walk w12: no usab...
+FAILED ../tests/test_outputs.py::test_w13 - AssertionError: walk w13: no usab...
+FAILED ../tests/test_outputs.py::test_w14 - AssertionError: walk w14: no usab...
+FAILED ../tests/test_outputs.py::test_w15 - AssertionError: walk w15: no usab...
+FAILED ../tests/test_outputs.py::test_w16 - AssertionError: walk w16: no usab...
+FAILED ../tests/test_outputs.py::test_w17 - AssertionError: walk w17: no usab...
+FAILED ../tests/test_outputs.py::test_w18 - AssertionError: walk w18: no usab...
+FAILED ../tests/test_outputs.py::test_w19 - AssertionError: walk w19: no usab...
+FAILED ../tests/test_outputs.py::test_w20 - AssertionError: walk w20: no usab...
+FAILED ../tests/test_outputs.py::test_w21 - AssertionError: walk w21: no usab...
+FAILED ../tests/test_outputs.py::test_w22 - AssertionError: walk w22: no usab...
+FAILED ../tests/test_outputs.py::test_w23 - AssertionError: walk w23: no usab...
+FAILED ../tests/test_outputs.py::test_w24 - AssertionError: walk w24: no usab...
+FAILED ../tests/test_outputs.py::test_w25 - AssertionError: walk w25: no usab...
+FAILED ../tests/test_outputs.py::test_w26 - AssertionError: walk w26: no usab...
+FAILED ../tests/test_outputs.py::test_w27 - AssertionError: walk w27: no usab...
+FAILED ../tests/test_outputs.py::test_w28 - AssertionError: walk w28: no usab...
+FAILED ../tests/test_outputs.py::test_w29 - AssertionError: walk w29: no usab...
+FAILED ../tests/test_outputs.py::test_w30 - AssertionError: walk w30: no usab...
+FAILED ../tests/test_outputs.py::test_w31 - AssertionError: walk w31: no usab...
+============================== 32 failed in 0.41s ==============================
