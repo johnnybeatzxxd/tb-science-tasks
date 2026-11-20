@@ -1,0 +1,709 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.7, pytest-8.4.1, pluggy-1.7.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 33 items
+
+../tests/test_outputs.py ..F..FFF...FFFFFFFF.FFFF.F.F..FFF               [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_walk[w01] ________________________________
+
+wid = 'w01'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; x_marginal: rho outside tolerance
+E       assert not ['x_marginal: kappa wrong', 'x_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w04] ________________________________
+
+wid = 'w04'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong
+E       assert not ['x_marginal: kappa wrong']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w05] ________________________________
+
+wid = 'w05'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: y_marginal: rho outside tolerance
+E       assert not ['y_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w06] ________________________________
+
+wid = 'w06'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; x_marginal: rho outside tolerance
+E       assert not ['x_marginal: kappa wrong', 'x_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w10] ________________________________
+
+wid = 'w10'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; y_marginal: kappa wrong
+E       assert not ['x_marginal: kappa wrong', 'y_marginal: kappa wrong']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w11] ________________________________
+
+wid = 'w11'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: rho outside tolerance
+E       assert not ['x_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w12] ________________________________
+
+wid = 'w12'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong
+E       assert not ['x_marginal: kappa wrong']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w13] ________________________________
+
+wid = 'w13'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: rho outside tolerance; y_marginal: rho outside tolerance
+E       assert not ['x_marginal: rho outside tolerance', 'y_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w14] ________________________________
+
+wid = 'w14'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; y_marginal: kappa wrong
+E       assert not ['x_marginal: kappa wrong', 'y_marginal: kappa wrong']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w15] ________________________________
+
+wid = 'w15'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: rho outside tolerance; y_marginal: rho outside tolerance
+E       assert not ['x_marginal: rho outside tolerance', 'y_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w16] ________________________________
+
+wid = 'w16'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: y_marginal: rho outside tolerance
+E       assert not ['y_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w17] ________________________________
+
+wid = 'w17'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; y_marginal: kappa wrong
+E       assert not ['x_marginal: kappa wrong', 'y_marginal: kappa wrong']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w19] ________________________________
+
+wid = 'w19'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; x_marginal: rho outside tolerance
+E       assert not ['x_marginal: kappa wrong', 'x_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w20] ________________________________
+
+wid = 'w20'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; x_marginal: rho outside tolerance
+E       assert not ['x_marginal: kappa wrong', 'x_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w21] ________________________________
+
+wid = 'w21'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: y_marginal: kappa wrong
+E       assert not ['y_marginal: kappa wrong']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w22] ________________________________
+
+wid = 'w22'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; x_marginal: rho outside tolerance; y_marginal: rho outside tolerance
+E       assert not ['x_marginal: kappa wrong', 'x_marginal: rho outside tolerance', 'y_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w24] ________________________________
+
+wid = 'w24'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; x_marginal: rho outside tolerance
+E       assert not ['x_marginal: kappa wrong', 'x_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w26] ________________________________
+
+wid = 'w26'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: y_marginal: rho outside tolerance
+E       assert not ['y_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w29] ________________________________
+
+wid = 'w29'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: y_marginal: kappa wrong; y_marginal: rho outside tolerance
+E       assert not ['y_marginal: kappa wrong', 'y_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w30] ________________________________
+
+wid = 'w30'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; y_marginal: kappa wrong
+E       assert not ['x_marginal: kappa wrong', 'y_marginal: kappa wrong']
+
+/tests/test_outputs.py:115: AssertionError
+________________________________ test_walk[w31] ________________________________
+
+wid = 'w31'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+        assert isinstance(data, dict), "no usable output"
+        assert wid in data, "walk %s missing from output" % wid
+        got = data[wid]
+        assert isinstance(got, dict)
+        bad = []
+        for key in KEYS:
+            ref = EXP[wid][key]
+            try:
+                rho = parse_rho(got[key]["rho"])
+                kap = parse_kappa(got[key]["kappa"])
+            except Exception as exc:
+                bad.append("%s: malformed entry (%s)" % (key, exc))
+                continue
+            rref = Fraction(ref["rho"])
+            kref = Fraction(ref["kappa"])
+            if kap != kref:
+                bad.append("%s: kappa wrong" % key)
+            if abs(rho - rref) > RHO_RTOL * rref:
+                bad.append("%s: rho outside tolerance" % key)
+>       assert not bad, "; ".join(bad)
+E       AssertionError: x_marginal: kappa wrong; y_marginal: rho outside tolerance
+E       assert not ['x_marginal: kappa wrong', 'y_marginal: rho outside tolerance']
+
+/tests/test_outputs.py:115: AssertionError
+=============================== warnings summary ===============================
+../usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: could not create cache path /tests/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/tests/pytest-cache-files-kc9yvm7_'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /tests/.pytest_cache/v/cache/lastfailed: [Errno 30] Read-only file system: '/tests/pytest-cache-files-03w7rzjd'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+__________________________ test_program_runs_in_time ___________________________
+----------------------------- Captured stdout call -----------------------------
+status ok returncode 0 elapsed 3.6 s
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_program_present
+PASSED ../tests/test_outputs.py::test_program_runs_in_time
+PASSED ../tests/test_outputs.py::test_walk[w02]
+PASSED ../tests/test_outputs.py::test_walk[w03]
+PASSED ../tests/test_outputs.py::test_walk[w07]
+PASSED ../tests/test_outputs.py::test_walk[w08]
+PASSED ../tests/test_outputs.py::test_walk[w09]
+PASSED ../tests/test_outputs.py::test_walk[w18]
+PASSED ../tests/test_outputs.py::test_walk[w23]
+PASSED ../tests/test_outputs.py::test_walk[w25]
+PASSED ../tests/test_outputs.py::test_walk[w27]
+PASSED ../tests/test_outputs.py::test_walk[w28]
+FAILED ../tests/test_outputs.py::test_walk[w01] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w04] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w05] - AssertionError: y_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w06] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w10] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w11] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w12] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w13] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w14] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w15] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w16] - AssertionError: y_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w17] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w19] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w20] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w21] - AssertionError: y_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w22] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w24] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w26] - AssertionError: y_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w29] - AssertionError: y_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w30] - AssertionError: x_marginal:...
+FAILED ../tests/test_outputs.py::test_walk[w31] - AssertionError: x_marginal:...
+================== 21 failed, 12 passed, 2 warnings in 3.72s ===================

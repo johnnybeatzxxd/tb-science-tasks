@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.7, pytest-8.4.1, pluggy-1.7.0
+rootdir: /
+plugins: json-ctrf-0.3.5
+collected 33 items
+
+../tests/test_outputs.py .................................               [100%]
+
+==================================== PASSES ====================================
+__________________________ test_program_runs_in_time ___________________________
+----------------------------- Captured stdout call -----------------------------
+status ok returncode 0 elapsed 90.8 s
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_program_present
+PASSED ../tests/test_outputs.py::test_program_runs_in_time
+PASSED ../tests/test_outputs.py::test_walk[w01]
+PASSED ../tests/test_outputs.py::test_walk[w02]
+PASSED ../tests/test_outputs.py::test_walk[w03]
+PASSED ../tests/test_outputs.py::test_walk[w04]
+PASSED ../tests/test_outputs.py::test_walk[w05]
+PASSED ../tests/test_outputs.py::test_walk[w06]
+PASSED ../tests/test_outputs.py::test_walk[w07]
+PASSED ../tests/test_outputs.py::test_walk[w08]
+PASSED ../tests/test_outputs.py::test_walk[w09]
+PASSED ../tests/test_outputs.py::test_walk[w10]
+PASSED ../tests/test_outputs.py::test_walk[w11]
+PASSED ../tests/test_outputs.py::test_walk[w12]
+PASSED ../tests/test_outputs.py::test_walk[w13]
+PASSED ../tests/test_outputs.py::test_walk[w14]
+PASSED ../tests/test_outputs.py::test_walk[w15]
+PASSED ../tests/test_outputs.py::test_walk[w16]
+PASSED ../tests/test_outputs.py::test_walk[w17]
+PASSED ../tests/test_outputs.py::test_walk[w18]
+PASSED ../tests/test_outputs.py::test_walk[w19]
+PASSED ../tests/test_outputs.py::test_walk[w20]
+PASSED ../tests/test_outputs.py::test_walk[w21]
+PASSED ../tests/test_outputs.py::test_walk[w22]
+PASSED ../tests/test_outputs.py::test_walk[w23]
+PASSED ../tests/test_outputs.py::test_walk[w24]
+PASSED ../tests/test_outputs.py::test_walk[w25]
+PASSED ../tests/test_outputs.py::test_walk[w26]
+PASSED ../tests/test_outputs.py::test_walk[w27]
+PASSED ../tests/test_outputs.py::test_walk[w28]
+PASSED ../tests/test_outputs.py::test_walk[w29]
+PASSED ../tests/test_outputs.py::test_walk[w30]
+PASSED ../tests/test_outputs.py::test_walk[w31]
+======================== 33 passed in 90.87s (0:01:30) =========================

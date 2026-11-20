@@ -1,0 +1,484 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.7, pytest-8.4.1, pluggy-1.7.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 33 items
+
+../tests/test_outputs.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF               [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_program_present _____________________________
+
+    def test_program_present():
+>       assert PROGRAM.is_file(), "missing /root/qtails/tails.py"
+E       AssertionError: missing /root/qtails/tails.py
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = PosixPath('/root/qtails/tails.py').is_file
+
+/tests/test_outputs.py:77: AssertionError
+__________________________ test_program_runs_in_time ___________________________
+
+    def test_program_runs_in_time():
+        status, elapsed, data = run_program()
+        print("status", status[0], "returncode", status[1], "elapsed %.1f s" % elapsed)
+        if status[3]:
+            print("stderr tail:", status[3])
+        assert status[0] == "ok", status[0]
+>       assert status[1] == 0, "non-zero exit status %r" % status[1]
+E       AssertionError: non-zero exit status 2
+E       assert 2 == 0
+
+/tests/test_outputs.py:86: AssertionError
+----------------------------- Captured stdout call -----------------------------
+status ok returncode 2 elapsed 0.0 s
+stderr tail: python3: can't open file '/root/qtails/tails.py': [Errno 2] No such file or directory
+
+________________________________ test_walk[w01] ________________________________
+
+wid = 'w01'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w02] ________________________________
+
+wid = 'w02'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w03] ________________________________
+
+wid = 'w03'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w04] ________________________________
+
+wid = 'w04'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w05] ________________________________
+
+wid = 'w05'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w06] ________________________________
+
+wid = 'w06'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w07] ________________________________
+
+wid = 'w07'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w08] ________________________________
+
+wid = 'w08'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w09] ________________________________
+
+wid = 'w09'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w10] ________________________________
+
+wid = 'w10'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w11] ________________________________
+
+wid = 'w11'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w12] ________________________________
+
+wid = 'w12'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w13] ________________________________
+
+wid = 'w13'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w14] ________________________________
+
+wid = 'w14'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w15] ________________________________
+
+wid = 'w15'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w16] ________________________________
+
+wid = 'w16'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w17] ________________________________
+
+wid = 'w17'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w18] ________________________________
+
+wid = 'w18'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w19] ________________________________
+
+wid = 'w19'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w20] ________________________________
+
+wid = 'w20'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w21] ________________________________
+
+wid = 'w21'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w22] ________________________________
+
+wid = 'w22'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w23] ________________________________
+
+wid = 'w23'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w24] ________________________________
+
+wid = 'w24'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w25] ________________________________
+
+wid = 'w25'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w26] ________________________________
+
+wid = 'w26'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w27] ________________________________
+
+wid = 'w27'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w28] ________________________________
+
+wid = 'w28'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w29] ________________________________
+
+wid = 'w29'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w30] ________________________________
+
+wid = 'w30'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+________________________________ test_walk[w31] ________________________________
+
+wid = 'w31'
+
+    @pytest.mark.parametrize("wid", sorted(EXP))
+    def test_walk(wid):
+        status, elapsed, data = run_program()
+>       assert isinstance(data, dict), "no usable output"
+E       AssertionError: no usable output
+E       assert False
+E        +  where False = isinstance(None, dict)
+
+/tests/test_outputs.py:96: AssertionError
+=============================== warnings summary ===============================
+../usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: could not create cache path /tests/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/tests/pytest-cache-files-h8s9162w'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /tests/.pytest_cache/v/cache/lastfailed: [Errno 30] Read-only file system: '/tests/pytest-cache-files-p88xez3t'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_program_present - AssertionError: missi...
+FAILED ../tests/test_outputs.py::test_program_runs_in_time - AssertionError: ...
+FAILED ../tests/test_outputs.py::test_walk[w01] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w02] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w03] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w04] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w05] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w06] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w07] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w08] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w09] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w10] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w11] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w12] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w13] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w14] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w15] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w16] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w17] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w18] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w19] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w20] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w21] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w22] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w23] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w24] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w25] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w26] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w27] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w28] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w29] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w30] - AssertionError: no usable o...
+FAILED ../tests/test_outputs.py::test_walk[w31] - AssertionError: no usable o...
+======================== 33 failed, 2 warnings in 0.15s ========================

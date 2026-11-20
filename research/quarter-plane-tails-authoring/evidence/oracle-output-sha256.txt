@@ -1,0 +1,4 @@
+3f348c553d581a339c687445c9b61cddb0b7cbb6979e34cdb613d0832f47860e  /tmp/claude-0/-home-user-tb-science-tasks/116a215d-4a0d-5aef-ae79-39730010ce77/scratchpad/logs/oracle/program_output.json
+3f348c553d581a339c687445c9b61cddb0b7cbb6979e34cdb613d0832f47860e  /tmp/claude-0/-home-user-tb-science-tasks/116a215d-4a0d-5aef-ae79-39730010ce77/scratchpad/logs/oracle_from_solve/program_output.json
+3f348c553d581a339c687445c9b61cddb0b7cbb6979e34cdb613d0832f47860e  /tmp/claude-0/-home-user-tb-science-tasks/116a215d-4a0d-5aef-ae79-39730010ce77/scratchpad/logs/oracle_rep2/program_output.json
+3f348c553d581a339c687445c9b61cddb0b7cbb6979e34cdb613d0832f47860e  /tmp/claude-0/-home-user-tb-science-tasks/116a215d-4a0d-5aef-ae79-39730010ce77/scratchpad/logs/oracle_rep3/program_output.json

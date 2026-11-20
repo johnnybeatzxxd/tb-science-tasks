@@ -188,7 +188,7 @@ def solve(w):
     mx, my = X.marginal(sx), Y.marginal(sy)
     res = {'x_boundary': (1 / sx['x'], sx['kappa']), 'y_boundary': (1 / sy['x'], sy['kappa']),
            'x_marginal': (1 / mx[0], mx[1]), 'y_marginal': (1 / my[0], my[1])}
-    return {k: {'rho': mp.nstr(r, 25), 'kappa': str(kap)} for k, (r, kap) in res.items()}
+    return {k: {'rho': mp.nstr(r, 25, strip_zeros=False), 'kappa': str(kap)} for k, (r, kap) in res.items()}
 
 
 if __name__ == '__main__':

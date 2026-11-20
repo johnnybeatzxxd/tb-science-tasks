@@ -75,7 +75,7 @@ Both are kept with the authoring files. They agree with the reference on every h
   - For Jackson networks with feedback and tandem networks, $\pi$ is explicit, and the answers ($\rho_i = \Lambda_i/\mu_i$, $\kappa = 0$ for all four sequences) are reproduced on 40 random networks and on the held-out ones.
   - In the paired-arrival model each marginal is exactly M/M/1. The reference gives $\rho = (\lambda_i + \lambda_{12})/\mu_i$ and $\kappa = 0$ on 181 random instances, including those whose boundary has $\kappa = -1/2$.
 - **Subtraction-free numerics.** `gth2d.py` is a block Grassmann–Taksar–Heyman elimination of large truncations, which keeps relative accuracy down to $10^{-280}$. The local exponent $\kappa_n = n(a_{n+1}/(\rho a_n) - 1)$ is computed with the reference $\rho$, and it converges to the reference $\kappa$:
-  - on about 900 random ergodic walks of all three drift-sign patterns;
+  - on several hundred random ergodic walks of all three drift-sign patterns;
   - on planted instances of every category;
   - on all light-traffic held-out walks.
 
@@ -109,4 +109,31 @@ The $\rho$ tolerance is not a separating lever. $\rho$ is an algebraic number of
 
 ## Evidence
 
-*(to be completed: oracle runs, alternatives, nop, baselines, probes)*
+All runs use the real verifier (`tests/Dockerfile` image, `--network none`, 4 CPUs, 8 GB). The submission directory is mounted as `/root/qtails`. Logs and per-run program outputs are kept with the authoring files.
+
+| Submission | Reward | Failed walk tests (of 31) |
+|---|---|---|
+| reference (`solve.sh` in the agent image, artifact copied to the verifier) | 1 | 0 |
+| reference, three repeated runs | 1, 1, 1 | 0 — `program_output.json` byte-identical (sha256 `3f348c55…`) |
+| alternative 1: log-coordinate geometry (`alt_theta.py`) | 1 | 0 |
+| alternative 2: exact real algebraic arithmetic (`alt_exact.py`) | 1 | 0 |
+| complete theory in IEEE double precision (numpy, coincidence tolerance $10^{-8}$; positive control) | 1 | 0 — worst relative $\rho$ error $7.6\times10^{-15}$ |
+| no program (nop) | 0 | all |
+| truncate-and-fit (block GTH, $N \ge 300$, Richardson fit, $\kappa$ rounded to a multiple of 1/2) | 0 | 28 |
+| own poles and branch point only, marginal $= \min(x_K, x^*)$ | 0 | 23 |
+| complete except the induced pole from the other axis | 0 | 7 |
+| complete except the marginal cancellation rule | 0 | 21 |
+| complete except merging of coincident singularities | 0 | 31 |
+
+Boundary probes on the reference output:
+
+- every $\rho$ scaled by $1 + 5\times10^{-10}$ passes;
+- one $\rho$ scaled by $1 + 2\times10^{-9}$ fails;
+- $\kappa$ written as decimals (`-1.5`) passes;
+- one $\kappa$ shifted by 1/2 fails;
+- one walk missing fails;
+- one $\rho$ with 12 significant digits fails.
+
+**Independent numerical check of the held-out set.** Each walk is solved by subtraction-free block GTH on an $N \times N$ truncation, with $N = 200$–$600$ according to the slowest rate. The local exponent $\kappa_n$ is computed with the reference $\rho$. For the product-form, critical and planted walks it converges to the reference $\kappa$; for example $-0.494$ ($-1/2$), $+0.956$ ($1$) and $0.000$ ($0$).
+
+In seven walks one sequence has a close competing singularity: a relative gap of $2\times10^{-4}$–$6\times10^{-4}$ between a pole and the branch point, or between the interior and boundary poles. There the truncation shows a steady intermediate exponent, as described under "Why the task is hard". For example, w16 has $\kappa_n \approx -0.39$ on a sequence whose exponent is $0$, because its own pole lies $2.3\times10^{-4}$ below the branch point. In these walks the three solvers agree, and the gap is reported by `near.py`.
