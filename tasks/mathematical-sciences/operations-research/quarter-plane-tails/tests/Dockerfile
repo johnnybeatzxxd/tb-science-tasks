@@ -12,3 +12,6 @@ RUN pip install --no-cache-dir numpy==2.1.3 scipy==1.14.1 sympy==1.13.3 mpmath==
 
 WORKDIR /root
 RUN mkdir -p /root/qtails
+
+# The verifier files (test.sh, test_outputs.py, checker, held-out walks and reference values).
+COPY . /tests/
