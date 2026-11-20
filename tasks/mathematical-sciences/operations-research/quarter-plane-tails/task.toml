@@ -1,0 +1,39 @@
+schema_version = "1.4"
+
+artifacts = ["/root/qtails"]
+
+[task]
+name = "turing/quarter-plane-tails"
+description = "Write a program that returns the exact tail asymptotics (decay rate rho and polynomial exponent kappa) of the boundary and marginal stationary probabilities of two-dimensional reflected random walks on the quarter plane, for previously unseen walks."
+version = "1.0.0"
+keywords = ["queueing-theory", "random-walk-in-the-quarter-plane", "stationary-distribution", "tail-asymptotics", "kernel-method", "analytic-continuation", "two-node-queueing-networks"]
+
+[metadata]
+domain = "mathematical-sciences"
+category = "operations-research"
+subcategory = "exact tail asymptotics of two-dimensional reflected random walks (queueing networks)"
+reward_type = "binary"
+source = "Written by PhD annotators"
+public_overlap = "None"
+
+[verifier]
+# 1800 s wall clock for the submitted program on the held-out file, plus staging and pytest
+timeout_sec = 2400
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+cpus = 4
+memory_mb = 8192
+storage_mb = 4096
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 18000
+network_mode = "public"
+
+[environment]
+cpus = 4
+memory_mb = 8192
+storage_mb = 10240
+network_mode = "public"
