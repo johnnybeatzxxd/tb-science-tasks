@@ -1,0 +1,20 @@
+reference output (must be correct)                                     CORRECT   as required structure problems 0, incorrect walks 0
+empty file                                                             INCORRECT as required rejected by strict parser: Expecting value: line 1 column 1 (char 0)
+empty object                                                           INCORRECT as required structure problems 0, incorrect walks 31
+copy of the public example output                                      INCORRECT as required structure problems 1, incorrect walks 31
+one rho just past tolerance (x 1+1.01e-9)                              INCORRECT as required structure problems 0, incorrect walks 1
+one rho just inside tolerance (x 1+0.99e-9, must be correct)           CORRECT   as required structure problems 0, incorrect walks 0
+one walk dropped                                                       INCORRECT as required structure problems 0, incorrect walks 1
+spurious extra walk id                                                 INCORRECT as required structure problems 1, incorrect walks 0
+one kappa off by 1/2                                                   INCORRECT as required structure problems 0, incorrect walks 1
+rho as a JSON number                                                   INCORRECT as required structure problems 0, incorrect walks 1
+kappa as a boolean                                                     INCORRECT as required structure problems 0, incorrect walks 1
+duplicate key                                                          INCORRECT as required rejected by strict parser: duplicate key 'w01'
+NaN constant                                                           INCORRECT as required rejected by strict parser: non-finite constant NaN
+rho with 12 significant digits                                         INCORRECT as required structure problems 0, incorrect walks 1
+weak baseline: b_generic                                               INCORRECT as required structure problems 0, incorrect walks 23
+weak baseline: b_nocancel                                              INCORRECT as required structure problems 0, incorrect walks 21
+weak baseline: b_nocoinc                                               INCORRECT as required structure problems 0, incorrect walks 31
+weak baseline: b_noinduced                                             INCORRECT as required structure problems 0, incorrect walks 7
+weak baseline: b_numeric                                               INCORRECT as required structure problems 0, incorrect walks 28
+ALL CONTROLS AS REQUIRED
