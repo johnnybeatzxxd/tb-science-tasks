@@ -1,0 +1,684 @@
+[
+ {
+  "id": "w01",
+  "source": "random, interior pole cancelled",
+  "answers": {
+   "x_boundary": [
+    "0.5898211367",
+    "-3/2"
+   ],
+   "y_boundary": [
+    "0.8311963141",
+    "0"
+   ],
+   "x_marginal": [
+    "0.5898211367",
+    "-3/2"
+   ],
+   "y_marginal": [
+    "0.8311963141",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w02",
+  "source": "planted interior pole at branch point",
+  "answers": {
+   "x_boundary": [
+    "0.4651162790",
+    "-3/2"
+   ],
+   "y_boundary": [
+    "0.6890355920",
+    "0"
+   ],
+   "x_marginal": [
+    "0.4651162790",
+    "-1/2"
+   ],
+   "y_marginal": [
+    "0.6890355920",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w03",
+  "source": "coupled processors critical",
+  "answers": {
+   "x_boundary": [
+    "0.8000000000",
+    "-1/2"
+   ],
+   "y_boundary": [
+    "0.5622173630",
+    "-3/2"
+   ],
+   "x_marginal": [
+    "0.8000000000",
+    "-1/2"
+   ],
+   "y_marginal": [
+    "0.5625000000",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w04",
+  "source": "tandem",
+  "answers": {
+   "x_boundary": [
+    "0.4444444444",
+    "0"
+   ],
+   "y_boundary": [
+    "0.6666666666",
+    "0"
+   ],
+   "x_marginal": [
+    "0.4444444444",
+    "0"
+   ],
+   "y_marginal": [
+    "0.6666666666",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w05",
+  "source": "planted interior pole at branch point",
+  "answers": {
+   "x_boundary": [
+    "0.5882352941",
+    "-3/2"
+   ],
+   "y_boundary": [
+    "0.7709056523",
+    "0"
+   ],
+   "x_marginal": [
+    "0.5882352941",
+    "-1/2"
+   ],
+   "y_marginal": [
+    "0.7709056523",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w06",
+  "source": "coupled processors near-miss",
+  "answers": {
+   "x_boundary": [
+    "0.4553399409",
+    "-3/2"
+   ],
+   "y_boundary": [
+    "0.3031544978",
+    "0"
+   ],
+   "x_marginal": [
+    "0.4553399409",
+    "-3/2"
+   ],
+   "y_marginal": [
+    "0.3031544978",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w07",
+  "source": "coupled processors near-miss slow",
+  "answers": {
+   "x_boundary": [
+    "0.9445059052",
+    "-3/2"
+   ],
+   "y_boundary": [
+    "0.7150407435",
+    "-3/2"
+   ],
+   "x_marginal": [
+    "0.9445059052",
+    "-3/2"
+   ],
+   "y_marginal": [
+    "0.7500000000",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w08",
+  "source": "random, drift (+,-)",
+  "answers": {
+   "x_boundary": [
+    "0.7415645352",
+    "0"
+   ],
+   "y_boundary": [
+    "0.6845099795",
+    "0"
+   ],
+   "x_marginal": [
+    "0.7415645352",
+    "0"
+   ],
+   "y_marginal": [
+    "0.6845099795",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w09",
+  "source": "planted two poles at branch point",
+  "answers": {
+   "x_boundary": [
+    "0.5128205128",
+    "0"
+   ],
+   "y_boundary": [
+    "0.4761904761",
+    "0"
+   ],
+   "x_marginal": [
+    "0.5128205128",
+    "0"
+   ],
+   "y_marginal": [
+    "0.4761904761",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w10",
+  "source": "two-demand critical",
+  "answers": {
+   "x_boundary": [
+    "0.8750000000",
+    "0"
+   ],
+   "y_boundary": [
+    "0.8000000000",
+    "-1/2"
+   ],
+   "x_marginal": [
+    "0.8750000000",
+    "0"
+   ],
+   "y_marginal": [
+    "0.8000000000",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w11",
+  "source": "coupled processors near-miss",
+  "answers": {
+   "x_boundary": [
+    "0.2459483250",
+    "0"
+   ],
+   "y_boundary": [
+    "0.5736421060",
+    "0"
+   ],
+   "x_marginal": [
+    "0.2459483250",
+    "0"
+   ],
+   "y_marginal": [
+    "0.5736421060",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w12",
+  "source": "two-demand near-miss",
+  "answers": {
+   "x_boundary": [
+    "0.8333333333",
+    "0"
+   ],
+   "y_boundary": [
+    "0.4544205704",
+    "-3/2"
+   ],
+   "x_marginal": [
+    "0.8333333333",
+    "0"
+   ],
+   "y_marginal": [
+    "0.4545454545",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w13",
+  "source": "jackson heavy traffic",
+  "answers": {
+   "x_boundary": [
+    "0.9800000000",
+    "0"
+   ],
+   "y_boundary": [
+    "0.9600000000",
+    "0"
+   ],
+   "x_marginal": [
+    "0.9800000000",
+    "0"
+   ],
+   "y_marginal": [
+    "0.9600000000",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w14",
+  "source": "two-demand paired only",
+  "answers": {
+   "x_boundary": [
+    "0.2000000000",
+    "-1/2"
+   ],
+   "y_boundary": [
+    "0.2000000000",
+    "-1/2"
+   ],
+   "x_marginal": [
+    "0.2000000000",
+    "0"
+   ],
+   "y_marginal": [
+    "0.2000000000",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w15",
+  "source": "jackson feedback",
+  "answers": {
+   "x_boundary": [
+    "0.6000000000",
+    "0"
+   ],
+   "y_boundary": [
+    "0.7000000000",
+    "0"
+   ],
+   "x_marginal": [
+    "0.6000000000",
+    "0"
+   ],
+   "y_marginal": [
+    "0.7000000000",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w16",
+  "source": "planted marginal double pole",
+  "answers": {
+   "x_boundary": [
+    "0.7446808510",
+    "0"
+   ],
+   "y_boundary": [
+    "0.8398418844",
+    "0"
+   ],
+   "x_marginal": [
+    "0.7446808510",
+    "1"
+   ],
+   "y_marginal": [
+    "0.8398418844",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w17",
+  "source": "two-demand heavy traffic",
+  "answers": {
+   "x_boundary": [
+    "0.9677419354",
+    "0"
+   ],
+   "y_boundary": [
+    "0.9756097560",
+    "0"
+   ],
+   "x_marginal": [
+    "0.9677419354",
+    "0"
+   ],
+   "y_marginal": [
+    "0.9756097560",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w18",
+  "source": "planted own pole at branch point",
+  "answers": {
+   "x_boundary": [
+    "0.8000000000",
+    "-1/2"
+   ],
+   "y_boundary": [
+    "0.4015836344",
+    "0"
+   ],
+   "x_marginal": [
+    "0.8000000000",
+    "-1/2"
+   ],
+   "y_marginal": [
+    "0.4015836344",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w19",
+  "source": "planted double pole, heavy",
+  "answers": {
+   "x_boundary": [
+    "0.9523809523",
+    "1"
+   ],
+   "y_boundary": [
+    "0.9779951100",
+    "0"
+   ],
+   "x_marginal": [
+    "0.9523809523",
+    "1"
+   ],
+   "y_marginal": [
+    "0.9779951100",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w20",
+  "source": "planted induced pole at branch point",
+  "answers": {
+   "x_boundary": [
+    "0.6250000000",
+    "-1/2"
+   ],
+   "y_boundary": [
+    "0.9090909090",
+    "0"
+   ],
+   "x_marginal": [
+    "0.6250000000",
+    "-1/2"
+   ],
+   "y_marginal": [
+    "0.9090909090",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w21",
+  "source": "two-demand near-miss",
+  "answers": {
+   "x_boundary": [
+    "0.2998046054",
+    "-3/2"
+   ],
+   "y_boundary": [
+    "0.6666666666",
+    "0"
+   ],
+   "x_marginal": [
+    "0.3000000000",
+    "0"
+   ],
+   "y_marginal": [
+    "0.6666666666",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w22",
+  "source": "planted induced pole at branch point",
+  "answers": {
+   "x_boundary": [
+    "0.4000000000",
+    "-1/2"
+   ],
+   "y_boundary": [
+    "0.6250000000",
+    "0"
+   ],
+   "x_marginal": [
+    "0.4000000000",
+    "-1/2"
+   ],
+   "y_marginal": [
+    "0.6250000000",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w23",
+  "source": "planted marginal double pole",
+  "answers": {
+   "x_boundary": [
+    "0.1875000000",
+    "0"
+   ],
+   "y_boundary": [
+    "0.7752887242",
+    "0"
+   ],
+   "x_marginal": [
+    "0.1875000000",
+    "1"
+   ],
+   "y_marginal": [
+    "0.7752887242",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w24",
+  "source": "planted double pole",
+  "answers": {
+   "x_boundary": [
+    "0.3773584905",
+    "1"
+   ],
+   "y_boundary": [
+    "0.5555555555",
+    "0"
+   ],
+   "x_marginal": [
+    "0.3773584905",
+    "1"
+   ],
+   "y_marginal": [
+    "0.5555555555",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w25",
+  "source": "coupled processors critical",
+  "answers": {
+   "x_boundary": [
+    "0.6666666666",
+    "-1/2"
+   ],
+   "y_boundary": [
+    "0.4382215693",
+    "-3/2"
+   ],
+   "x_marginal": [
+    "0.6666666666",
+    "-1/2"
+   ],
+   "y_marginal": [
+    "0.4444444444",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w26",
+  "source": "random, interior pole dominant",
+  "answers": {
+   "x_boundary": [
+    "0.5833487552",
+    "-3/2"
+   ],
+   "y_boundary": [
+    "0.8258374367",
+    "0"
+   ],
+   "x_marginal": [
+    "0.6451612903",
+    "0"
+   ],
+   "y_marginal": [
+    "0.8258374367",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w27",
+  "source": "planted double pole",
+  "answers": {
+   "x_boundary": [
+    "0.4166666666",
+    "1"
+   ],
+   "y_boundary": [
+    "0.3636363636",
+    "0"
+   ],
+   "x_marginal": [
+    "0.4166666666",
+    "1"
+   ],
+   "y_marginal": [
+    "0.3636363636",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w28",
+  "source": "random, drift (-,+)",
+  "answers": {
+   "x_boundary": [
+    "0.3436687157",
+    "-3/2"
+   ],
+   "y_boundary": [
+    "0.8998216310",
+    "0"
+   ],
+   "x_marginal": [
+    "0.5587686567",
+    "0"
+   ],
+   "y_marginal": [
+    "0.8998216310",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w29",
+  "source": "planted own pole at branch point, heavy",
+  "answers": {
+   "x_boundary": [
+    "0.9546539379",
+    "-1/2"
+   ],
+   "y_boundary": [
+    "0.9684734807",
+    "-3/2"
+   ],
+   "x_marginal": [
+    "0.9548260585",
+    "0"
+   ],
+   "y_marginal": [
+    "0.9684734807",
+    "-3/2"
+   ]
+  }
+ },
+ {
+  "id": "w30",
+  "source": "two-demand critical",
+  "answers": {
+   "x_boundary": [
+    "0.3333333333",
+    "-1/2"
+   ],
+   "y_boundary": [
+    "0.4285714285",
+    "0"
+   ],
+   "x_marginal": [
+    "0.3333333333",
+    "0"
+   ],
+   "y_marginal": [
+    "0.4285714285",
+    "0"
+   ]
+  }
+ },
+ {
+  "id": "w31",
+  "source": "tandem heavy traffic",
+  "answers": {
+   "x_boundary": [
+    "0.9800000000",
+    "0"
+   ],
+   "y_boundary": [
+    "0.9600000000",
+    "0"
+   ],
+   "x_marginal": [
+    "0.9800000000",
+    "0"
+   ],
+   "y_marginal": [
+    "0.9600000000",
+    "0"
+   ]
+  }
+ }
+]

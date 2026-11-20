@@ -30,6 +30,12 @@ def planted(kind, seed, want_key, want, lo=1.05, hi=3.0, extra=None, den=20, ylo
             continue
         if extra and not extra(r):
             continue
+        if Q.branch_point(s) == Q.mp.inf or Q.branch_point(Q.transpose(s)) == Q.mp.inf:
+            continue
+        try:
+            A.solve(walk_json(s, 'chk'))
+        except Exception:
+            continue
         return s
     raise RuntimeError(kind)
 
