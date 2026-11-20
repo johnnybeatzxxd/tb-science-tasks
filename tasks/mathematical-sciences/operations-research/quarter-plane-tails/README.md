@@ -19,11 +19,11 @@ See [instruction.md](instruction.md) for the task as the agent receives it, and 
 
 | Run | Date (UTC) | Wall time | Reward | Record |
 |---|---|---|---|---|
-| Harbor oracle (`harbor run -a oracle`) | HARBOR_ORACLE_DATE | HARBOR_ORACLE_WALL | HARBOR_ORACLE_REWARD | job `HARBOR_ORACLE_JOB` |
-| Harbor nop (`harbor run -a nop`) | HARBOR_NOP_DATE | HARBOR_NOP_WALL | HARBOR_NOP_REWARD | job `HARBOR_NOP_JOB` |
-| Reference, solve stage offline (`solve.sh` with `--network none`), real verifier | RR_OFF_DATE | RR_OFF_WALL | 1 | `tests/provenance/run_records/reference_offline_solve.json` |
-| Reference, real verifier, run 1 / run 2 | RR1_DATE | RR1_WALL | 1 / 1 | `reference_run1.json`, `reference_run2.json` (intermediates byte-identical) |
-| nop, real verifier | NOP_DATE | NOP_WALL | 0 | `tests/provenance/run_records/nop.json` |
+| Harbor oracle (`harbor run -a oracle`) | 2026-11-20 | 47 s | 1 | job `dfb85d12-2199-47cd-8db3-b5b1f4bf0c56` |
+| Harbor nop (`harbor run -a nop`) | 2026-11-20 | 41 s | 0 | job `9e468dd0-15a5-4a6e-9fbd-410218befcd4` |
+| Reference, solve stage offline (`solve.sh` with `--network none`), real verifier | 2026-11-20 | 6 s | 1 | `tests/provenance/run_records/reference_offline_solve.json` |
+| Reference, real verifier, run 1 / run 2 | 2026-11-20 | 5 s | 1 / 1 | `reference_run1.json`, `reference_run2.json` (intermediates byte-identical) |
+| nop, real verifier | 2026-11-20 | 1 s | 0 | `tests/provenance/run_records/nop.json` |
 
 The reference program needs about 3 s for the 31 walks, which is under 1% of the 1800 s limit.
 
@@ -57,7 +57,7 @@ The coincidences of these points, which change $\kappa$, occur at natural parame
 - Critical cases come from small integer rates. One example is parallel queues with paired arrivals $(\lambda_1,\lambda_2,\lambda_{12},\mu_1,\mu_2) = (1,1,2,9,7)$: there a boundary pole sits exactly on the branch point ($\kappa = -1/2$), while each station is an M/M/1 queue.
 - Another is coupled processors whose boundary service rate sits on a regime boundary.
 - Heavy traffic ($\rho$ up to 0.98) is the regime queueing studies care about.
-- Near-coincidences (relative gaps $3\times10^{-5}$–$10^{-3}$) appear in about one random two-queue model in ten.
+- Near-coincidences (relative gaps $3\times10^{-5}$–$10^{-3}$) appear at plain integer rates of the coupled-processor and paired-arrival models.
 
 **What goes wrong.** Each pitfall leaves an internally consistent answer:
 
