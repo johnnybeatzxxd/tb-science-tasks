@@ -1,0 +1,9 @@
+interior support 4 (paired arrivals only)                      ok {'x_boundary': ('0.20000000', '-1/2'), 'y_boundary': ('0.20000000', '-1/2'), 'x_marginal': ('0.20000000', '0'), 'y_marginal': ('0.20000000', '0')}
+interior support 4, light traffic (rho 0.1)                    ok {'x_boundary': ('0.10000000', '-1/2'), 'y_boundary': ('0.10000000', '-1/2'), 'x_marginal': ('0.10000000', '0'), 'y_marginal': ('0.10000000', '0')}
+heavy traffic rho 0.99 (tandem)                                ok {'x_boundary': ('0.99000000', '0'), 'y_boundary': ('0.98000000', '0'), 'x_marginal': ('0.99000000', '0'), 'y_marginal': ('0.98000000', '0')}
+heavy traffic rho 0.98 both stations (Jackson)                 ok {'x_boundary': ('0.98039215', '0'), 'y_boundary': ('0.98039215', '0'), 'x_marginal': ('0.98039215', '0'), 'y_marginal': ('0.98039215', '0')}
+interior mean (+,-) (coupled processors, overloaded queue 1)   ok {'x_boundary': ('0.70894541', '0'), 'y_boundary': ('0.30789136', '-3/2'), 'x_marginal': ('0.70894541', '0'), 'y_marginal': ('0.33333333', '0')}
+interior mean (-,+) (coupled processors, overloaded queue 2)   ok {'x_boundary': ('0.30789136', '-3/2'), 'y_boundary': ('0.70894541', '0'), 'x_marginal': ('0.33333333', '0'), 'y_marginal': ('0.70894541', '0')}
+large denominators (rates with 7-digit denominators)           ok {'x_boundary': ('0.28044159', '0'), 'y_boundary': ('0.17141666', '-3/2'), 'x_marginal': ('0.28044159', '0'), 'y_marginal': ('0.17141666', '-3/2')}
+single-jump boundary laws                                      ok {'x_boundary': ('0.50000000', '0'), 'y_boundary': ('0.33333333', '0'), 'x_marginal': ('0.50000000', '0'), 'y_marginal': ('0.33333333', '0')}
+ALL PROBES OK

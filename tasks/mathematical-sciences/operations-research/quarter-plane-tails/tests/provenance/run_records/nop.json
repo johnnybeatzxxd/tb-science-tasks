@@ -1,0 +1,1 @@
+{"run": "nop", "submission": "nop", "reward": 0, "date_utc": "2026-11-20T21:18:35Z", "wall_seconds": 1, "intermediates_sha256": "908c2b01551c10ad47b9ce0331469b34a216e62006354811c0e860ab9d10fe4f", "verifier": "tests/Dockerfile image, docker --network none --cpus 4 -m 8g, tests/test.sh"}

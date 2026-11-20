@@ -1,0 +1,1 @@
+{"run": "reference_run2", "submission": "oracle", "reward": 1, "date_utc": "2026-11-20T21:18:28Z", "wall_seconds": 5, "intermediates_sha256": "b39cceea660cf474073038a5f9d9867ec03e060dc3919ac207b4f9224b2f924e", "verifier": "tests/Dockerfile image, docker --network none --cpus 4 -m 8g, tests/test.sh"}

@@ -1,0 +1,309 @@
+OK   top level is {'walks': [...]}
+OK   exactly 31 walks
+OK   ids are unique strings
+OK   each walk has exactly the five keys
+OK   every probability is a string p/q with integers p >= 1, q >= 1
+OK   every jump key is 'a,b' with a, b in {-1,0,1}
+OK   boundary laws never leave the quadrant
+OK   every law sums to exactly 1
+OK   denominators below 1e16 (max 5960696113200000)
+OK   interior support sizes between 4 and 9, both reached (4..9)
+OK   w01 interior mean nonzero in both coordinates
+OK   w01 interior law has an increasing and a decreasing jump in each coordinate
+OK   w01 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w01 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w01 aperiodic (a law has a self-loop)
+OK   w02 interior mean nonzero in both coordinates
+OK   w02 interior law has an increasing and a decreasing jump in each coordinate
+OK   w02 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w02 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w02 aperiodic (a law has a self-loop)
+OK   w03 interior mean nonzero in both coordinates
+OK   w03 interior law has an increasing and a decreasing jump in each coordinate
+OK   w03 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w03 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w03 aperiodic (a law has a self-loop)
+OK   w04 interior mean nonzero in both coordinates
+OK   w04 interior law has an increasing and a decreasing jump in each coordinate
+OK   w04 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w04 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w04 aperiodic (a law has a self-loop)
+OK   w05 interior mean nonzero in both coordinates
+OK   w05 interior law has an increasing and a decreasing jump in each coordinate
+OK   w05 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w05 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w05 aperiodic (a law has a self-loop)
+OK   w06 interior mean nonzero in both coordinates
+OK   w06 interior law has an increasing and a decreasing jump in each coordinate
+OK   w06 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w06 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w06 aperiodic (a law has a self-loop)
+OK   w07 interior mean nonzero in both coordinates
+OK   w07 interior law has an increasing and a decreasing jump in each coordinate
+OK   w07 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w07 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w07 aperiodic (a law has a self-loop)
+OK   w08 interior mean nonzero in both coordinates
+OK   w08 interior law has an increasing and a decreasing jump in each coordinate
+OK   w08 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w08 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w08 aperiodic (a law has a self-loop)
+OK   w09 interior mean nonzero in both coordinates
+OK   w09 interior law has an increasing and a decreasing jump in each coordinate
+OK   w09 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w09 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w09 aperiodic (a law has a self-loop)
+OK   w10 interior mean nonzero in both coordinates
+OK   w10 interior law has an increasing and a decreasing jump in each coordinate
+OK   w10 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w10 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w10 aperiodic (a law has a self-loop)
+OK   w11 interior mean nonzero in both coordinates
+OK   w11 interior law has an increasing and a decreasing jump in each coordinate
+OK   w11 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w11 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w11 aperiodic (a law has a self-loop)
+OK   w12 interior mean nonzero in both coordinates
+OK   w12 interior law has an increasing and a decreasing jump in each coordinate
+OK   w12 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w12 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w12 aperiodic (a law has a self-loop)
+OK   w13 interior mean nonzero in both coordinates
+OK   w13 interior law has an increasing and a decreasing jump in each coordinate
+OK   w13 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w13 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w13 aperiodic (a law has a self-loop)
+OK   w14 interior mean nonzero in both coordinates
+OK   w14 interior law has an increasing and a decreasing jump in each coordinate
+OK   w14 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w14 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w14 aperiodic (a law has a self-loop)
+OK   w15 interior mean nonzero in both coordinates
+OK   w15 interior law has an increasing and a decreasing jump in each coordinate
+OK   w15 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w15 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w15 aperiodic (a law has a self-loop)
+OK   w16 interior mean nonzero in both coordinates
+OK   w16 interior law has an increasing and a decreasing jump in each coordinate
+OK   w16 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w16 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w16 aperiodic (a law has a self-loop)
+OK   w17 interior mean nonzero in both coordinates
+OK   w17 interior law has an increasing and a decreasing jump in each coordinate
+OK   w17 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w17 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w17 aperiodic (a law has a self-loop)
+OK   w18 interior mean nonzero in both coordinates
+OK   w18 interior law has an increasing and a decreasing jump in each coordinate
+OK   w18 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w18 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w18 aperiodic (a law has a self-loop)
+OK   w19 interior mean nonzero in both coordinates
+OK   w19 interior law has an increasing and a decreasing jump in each coordinate
+OK   w19 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w19 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w19 aperiodic (a law has a self-loop)
+OK   w20 interior mean nonzero in both coordinates
+OK   w20 interior law has an increasing and a decreasing jump in each coordinate
+OK   w20 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w20 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w20 aperiodic (a law has a self-loop)
+OK   w21 interior mean nonzero in both coordinates
+OK   w21 interior law has an increasing and a decreasing jump in each coordinate
+OK   w21 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w21 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w21 aperiodic (a law has a self-loop)
+OK   w22 interior mean nonzero in both coordinates
+OK   w22 interior law has an increasing and a decreasing jump in each coordinate
+OK   w22 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w22 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w22 aperiodic (a law has a self-loop)
+OK   w23 interior mean nonzero in both coordinates
+OK   w23 interior law has an increasing and a decreasing jump in each coordinate
+OK   w23 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w23 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w23 aperiodic (a law has a self-loop)
+OK   w24 interior mean nonzero in both coordinates
+OK   w24 interior law has an increasing and a decreasing jump in each coordinate
+OK   w24 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w24 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w24 aperiodic (a law has a self-loop)
+OK   w25 interior mean nonzero in both coordinates
+OK   w25 interior law has an increasing and a decreasing jump in each coordinate
+OK   w25 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w25 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w25 aperiodic (a law has a self-loop)
+OK   w26 interior mean nonzero in both coordinates
+OK   w26 interior law has an increasing and a decreasing jump in each coordinate
+OK   w26 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w26 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w26 aperiodic (a law has a self-loop)
+OK   w27 interior mean nonzero in both coordinates
+OK   w27 interior law has an increasing and a decreasing jump in each coordinate
+OK   w27 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w27 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w27 aperiodic (a law has a self-loop)
+OK   w28 interior mean nonzero in both coordinates
+OK   w28 interior law has an increasing and a decreasing jump in each coordinate
+OK   w28 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w28 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w28 aperiodic (a law has a self-loop)
+OK   w29 interior mean nonzero in both coordinates
+OK   w29 interior law has an increasing and a decreasing jump in each coordinate
+OK   w29 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w29 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w29 aperiodic (a law has a self-loop)
+OK   w30 interior mean nonzero in both coordinates
+OK   w30 interior law has an increasing and a decreasing jump in each coordinate
+OK   w30 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w30 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w30 aperiodic (a law has a self-loop)
+OK   w31 interior mean nonzero in both coordinates
+OK   w31 interior law has an increasing and a decreasing jump in each coordinate
+OK   w31 positive recurrent (Fayolle-Malyshev-Menshikov drift conditions)
+OK   w31 irreducible (origin reaches and is reached from every state of [0,8]^2 within [0,24]^2)
+OK   w31 aperiodic (a law has a self-loop)
+OK   12 walks with one positive interior mean component (12)
+OK   exact rho between 0.1875 and 0.98, both reached
+OK   0 < rho < 1
+OK   kappa rational
+OK   classical network present: Jackson network with feedback -> ['w15']
+OK   classical network present: Jackson network, heavy traffic -> ['w13']
+OK   classical network present: tandem network -> ['w04']
+OK   classical network present: tandem network, heavy traffic -> ['w31']
+OK   classical network present: coupled processors (2,3,6,9,11,4) -> ['w11']
+OK   classical network present: coupled processors (4,2,6,7,12,6) -> ['w06']
+OK   classical network present: coupled processors (5,3,4,4,14,5) -> ['w07']
+OK   classical network present: parallel queues, paired arrivals only (0,0,1,5,5) -> ['w14']
+OK   classical network present: parallel queues (1,1,2,9,7) -> ['w30']
+OK   classical network present: parallel queues (3,0,4,8,5) -> ['w10']
+OK   classical network present: parallel queues (4,4,1,6,11) -> ['w12']
+OK   classical network present: parallel queues (2,3,1,10,6) -> ['w21']
+OK   classical network present: parallel queues, heavy traffic -> ['w17']
+OK   walks on an exact regime boundary (kappa -1/2 or 1 somewhere): 16
+OK   10 near-coincidences with relative distance in [3e-5, 1e-3): ['3.24e-05', '1.80e-04', '2.34e-04', '2.75e-04', '3.44e-04', '4.60e-04', '5.02e-04', '6.18e-04', '6.51e-04', '7.87e-04']
+OK   w01 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w01 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w01 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w01 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w02 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w02 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w02 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w02 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w03 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w03 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w03 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w03 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w04 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w04 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w04 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w04 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w05 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w05 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w05 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w05 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w06 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w06 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w06 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w06 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w07 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w07 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w07 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w07 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w08 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w08 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w08 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w08 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w09 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w09 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w09 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w09 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w10 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w10 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w10 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w10 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w11 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w11 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w11 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w11 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w12 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w12 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w12 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w12 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w13 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w13 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w13 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w13 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w14 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w14 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w14 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w14 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w15 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w15 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w15 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w15 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w16 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w16 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w16 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w16 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w17 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w17 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w17 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w17 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w18 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w18 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w18 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w18 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w19 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w19 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w19 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w19 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w20 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w20 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w20 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w20 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w21 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w21 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w21 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w21 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w22 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w22 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w22 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w22 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w23 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w23 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w23 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w23 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w24 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w24 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w24 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w24 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w25 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w25 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w25 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w25 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w26 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w26 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w26 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w26 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w27 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w27 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w27 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w27 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w28 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w28 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w28 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w28 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w29 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w29 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w29 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w29 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w30 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w30 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w30 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w30 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w31 x_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w31 y_boundary: reference and exact-arithmetic solver reproduce expected.json
+OK   w31 x_marginal: reference and exact-arithmetic solver reproduce expected.json
+OK   w31 y_marginal: reference and exact-arithmetic solver reproduce expected.json
+ALL PROMISES HOLD

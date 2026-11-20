@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.7, pytest-8.4.1, pluggy-1.7.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 32 items
+
+../tests/test_outputs.py ................................                [100%]
+
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_contract
+PASSED ../tests/test_outputs.py::test_w01
+PASSED ../tests/test_outputs.py::test_w02
+PASSED ../tests/test_outputs.py::test_w03
+PASSED ../tests/test_outputs.py::test_w04
+PASSED ../tests/test_outputs.py::test_w05
+PASSED ../tests/test_outputs.py::test_w06
+PASSED ../tests/test_outputs.py::test_w07
+PASSED ../tests/test_outputs.py::test_w08
+PASSED ../tests/test_outputs.py::test_w09
+PASSED ../tests/test_outputs.py::test_w10
+PASSED ../tests/test_outputs.py::test_w11
+PASSED ../tests/test_outputs.py::test_w12
+PASSED ../tests/test_outputs.py::test_w13
+PASSED ../tests/test_outputs.py::test_w14
+PASSED ../tests/test_outputs.py::test_w15
+PASSED ../tests/test_outputs.py::test_w16
+PASSED ../tests/test_outputs.py::test_w17
+PASSED ../tests/test_outputs.py::test_w18
+PASSED ../tests/test_outputs.py::test_w19
+PASSED ../tests/test_outputs.py::test_w20
+PASSED ../tests/test_outputs.py::test_w21
+PASSED ../tests/test_outputs.py::test_w22
+PASSED ../tests/test_outputs.py::test_w23
+PASSED ../tests/test_outputs.py::test_w24
+PASSED ../tests/test_outputs.py::test_w25
+PASSED ../tests/test_outputs.py::test_w26
+PASSED ../tests/test_outputs.py::test_w27
+PASSED ../tests/test_outputs.py::test_w28
+PASSED ../tests/test_outputs.py::test_w29
+PASSED ../tests/test_outputs.py::test_w30
+PASSED ../tests/test_outputs.py::test_w31
+============================== 32 passed in 3.59s ==============================

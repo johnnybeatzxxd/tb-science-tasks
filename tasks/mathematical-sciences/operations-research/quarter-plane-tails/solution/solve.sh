@@ -9,7 +9,7 @@ python3 - <<'PY'
 import json
 from fractions import Fraction
 got = json.load(open('/tmp/examples_out.json'))
-ref = json.load(open('/root/examples_answers.json'))
+ref = json.load(open('/root/examples_output.json'))
 for wid, r in ref.items():
     for key, v in r.items():
         g = got[wid][key]
